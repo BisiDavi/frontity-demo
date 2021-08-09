@@ -18,6 +18,8 @@ const Container = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   & h3 {
     font-weight: 500;
@@ -31,5 +33,7 @@ const Container = styled.section`
     height: 50px;
     font-size: 20px;
     width: 200px;
+    color: white;
+    font-
   }
 `;

@@ -1,12 +1,17 @@
 import { connect, styled } from "frontity";
 import colors from "../styles/colors";
+import telIcon from "../assets/tel.png";
+import mapIcon from "../assets/map.png";
+import mailIcon from "../assets/mail.png";
 import helpIcon from "../assets/helpIcon.png";
 import upArrowIcon from "../assets/upArrow.png";
 import Logo from "./logo";
+import SocialIcons from "./social-icons";
+import Link from "./link";
 
 function Footer({ state, bg = colors.gray }) {
   return (
-    <Container>
+    <Container style={{ backgroundColor: bg }}>
       <TopSection>
         <span>
           <h5>Help</h5>
@@ -20,35 +25,33 @@ function Footer({ state, bg = colors.gray }) {
       <MainSection>
         <Logo />
         <FooterGroup>
-          <ul>
+          <Contact>
             <li>
-              <img src={} alt="telephone" />
+              <img src={telIcon} alt="telephone" />
               (701) 293-8242
             </li>
             <li>
-              <img src={} alt="telephone" />
-              (701) 293-8242
-            </li>
-            <li>
-              <img src={} alt="address" />
+              <img src={mapIcon} alt="address" />
               4344 20th Ave S Fargo, ND 58103
             </li>
             <li>
-              <img src={} alt="email" />
+              <img src={mailIcon} alt="email" />
               info@baganstrindenvision.com
             </li>
-          </ul>
-          <hr />          
-          <ul>
-            <Link href="">CLINICAL TRIALS</Link>
-            <Link href="">CONSTACT LENS </Link>
-            <Link href="">PROVIDER PORTAL</Link>
-            <Link href="">BLOG</Link>
-            <Link href="">CONTACT</Link>
-            <Link href="">PRIVACY POLICY</Link>
-          </ul>
-          <hr />          
+          </Contact>
+          <hr />
+          <FooterLinks>
+            <Link link="#">CLINICAL TRIALS</Link>
+            <Link link="#">CONSTACT LENS </Link>
+            <Link link="#">PROVIDER PORTAL</Link>
+            <Link link="#">BLOG</Link>
+            <Link link="#">CONTACT</Link>
+            <Link link="#">PRIVACY POLICY</Link>
+          </FooterLinks>
+          <hr />
+          <SocialIcons />
         </FooterGroup>
+        <p>All rights reserved</p>
       </MainSection>
     </Container>
   );
@@ -59,24 +62,77 @@ export default connect(Footer);
 const Container = styled.footer`
   display: flex;
   align-items: center;
-  background-color: ${bg};
+  flex-direction: column;
+
+  & hr {
+    margin: 0px;
+  }
 `;
 
 const TopSection = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  padding: 20px;
+  width: 100%;
+  & span {
+    display: flex;
+    align-items: center;
+    margin: 0px 70px;
+  }
+  & span > h5 {
+    margin: 20px;
+  }
 `;
 
 const MainSection = styled.div`
   display: flex;
   flex-direction: column;
+  width: 90%;
+  & p {
+    text-align: center;
+  }
 `;
 
 const FooterGroup = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+
+  & hr {
+    height: 120px;
+  }
 `;
 
+const Contact = styled.ul`
+  padding: 0px;
+
+  & li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+  }
+
+  & li > img {
+    margin: 0px 20px;
+  }
+`;
+
+const FooterLinks = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 500px;
+
+  & li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+  }
+
+  & a {
+    margin: 5px;
+  }
+`;

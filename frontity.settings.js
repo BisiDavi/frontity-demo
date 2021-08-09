@@ -35,7 +35,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://awesome-hair-store.000webhostapp.com",
+          url: "https://awesome-hair-store.000webhostapp.com", 
         },
       },
     },

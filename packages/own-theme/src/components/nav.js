@@ -38,6 +38,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border-top: 1px solid black;
 `;
 
 const NavItem = styled.div`

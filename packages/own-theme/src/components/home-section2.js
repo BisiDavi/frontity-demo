@@ -1,4 +1,8 @@
 import { connect, styled } from "frontity";
+import waves from "../assets/waves.png";
+import consulting from "../assets/consulting.png";
+import sun from "../assets/sun.png";
+import vision from "../assets/vision.png";
 
 function HomeSection2({ data }) {
   return (
@@ -8,8 +12,34 @@ function HomeSection2({ data }) {
       <RightWaveDesign />
       <CardGroup>
         <Card>
-          <h2></h2>
-          <p></p>
+          <img src={consulting} alt="consulting icon" />
+          <h2>SCHEDULE A CONSULTATION</h2>
+          <p>
+            Come in for a no-pressure consultation where we'll go over your
+            options and our recommendations. We also go over all of your
+            financing options at that time!
+          </p>
+          <hr />
+        </Card>
+        <Card>
+          <img src={vision} alt="vision icon" />
+          <h2>SHORT 5-MINUTE PROCEDURE</h2>
+          <p>
+            Our expert surgeons complete the entire procedure in just a few
+            minutes. The entire process is painless and you'll back to normal
+            within a few hours!
+          </p>
+          <hr />
+        </Card>
+        <Card>
+          <img src={sun} alt="sun icon" />
+          <h2>SEE LIFE CLEARLY!</h2>
+          <p>
+            With our clear vision guarantee, you will have clear vision for
+            life. We are with you for the long haul. With your new, clear vision
+            you'll have more money for what you love, and more time for who you
+            love!
+          </p>
           <hr />
         </Card>
       </CardGroup>
@@ -26,6 +56,7 @@ const Container = styled.section`
   align-items: flex-start;
   background-color: white;
   position: relative;
+  background-image: url(${waves});
 `;
 
 const LeftWaveDesign = styled.img`

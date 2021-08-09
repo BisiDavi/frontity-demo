@@ -2,6 +2,7 @@ import { connect, styled } from "frontity";
 import bg from "../assets/bg.png";
 import roundLogo from "../assets/logoRounded.png";
 import colors from "../styles/colors";
+import parents from "../assets/parents.png";
 
 function HomeSection3({ data }) {
   return (
@@ -13,9 +14,23 @@ function HomeSection3({ data }) {
       <InnerContainer>
         <FeaturedImage>
           <img src={roundLogo} alt="bagan strinden vision logo" />
-          <img src="" alt="" />
+          <img src={parents} alt="parents" />
         </FeaturedImage>
-        <TextContent></TextContent>
+        <TextContent>
+          <span></span>
+          <h3>25,000+</h3>
+          <h5>CATARACT SURGERIES PERFORMED</h5>
+        </TextContent>
+        <TextContent>
+          <span></span>
+          <h3>15,000+</h3>
+          <h5>LASIK SURGERIES PERFORMED</h5>
+        </TextContent>
+        <TextContent>
+          <span></span>
+          <h3>20 / Happy</h3>
+          <h5>YOUR VISION AFTER THE PROCEDURE</h5>
+        </TextContent>
       </InnerContainer>
     </Container>
   );

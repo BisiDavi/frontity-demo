@@ -1,17 +1,17 @@
-import { connect, styled } from "frontity";
-import Link from "./link";
+import { styled } from "frontity";
+import SocialIcons from "./social-icons";
 import Nav from "./nav";
 
-function Header({ state }) {
+function Header() {
   return (
     <Container>
-      
+      <SocialIcons />
       <Nav />
     </Container>
   );
 }
 
-export default connect(Header);
+export default Header;
 
 const Container = styled.header`
   width: 100%;
@@ -22,5 +22,3 @@ const Container = styled.header`
   flex-direction: column;
   margin-bottom: 20px;
 `;
-
-

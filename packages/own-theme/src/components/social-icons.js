@@ -1,9 +1,11 @@
-import { connect } from "frontity";
+import { connect, styled } from "frontity";
+
+import Link from "./link";
 import facebook from "../assets/facebook.png";
 import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
 
-function SocialIcons() {
+function SocialIcons({ state }) {
   function displayIcon(icon) {
     switch (icon) {
       case "facebook":
@@ -33,7 +35,6 @@ const SocialLinks = styled.ul`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border-bottom: 1px solid black;
   height: 50px;
   margin: 0px;
 `;
