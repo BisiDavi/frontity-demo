@@ -56,4 +56,5 @@ macOS .DS_Store files
 .pnp.*
 
 # Frontity
-build
+/build
+/packages/upwork-site/
