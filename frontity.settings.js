@@ -2,14 +2,14 @@ const settings = {
   name: "demo-frontity",
   state: {
     frontity: {
-      url: "https://test.frontity.org",
+      url: "https://awesome-hair-store.000webhostapp.com",
       title: "Getting Started with Test Frontity Blog",
       description: "WordPress installation for Frontity development",
     },
   },
   packages: [
     {
-      name: "@frontity/mars-theme",
+      name: "@frontity/own-theme",
       state: {
         theme: {
           menu: [
@@ -21,7 +21,7 @@ const settings = {
             showOnList: false,
             showOnPost: false,
           },
-          socialLinks: {
+          SocialLinks: {
             links: [
               { link: "#facebook", name: "facebook" },
               { link: "#twitter", name: "twitter" },
@@ -35,7 +35,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://test.frontity.org",
+          url: "https://awesome-hair-store.000webhostapp.com",
         },
       },
     },

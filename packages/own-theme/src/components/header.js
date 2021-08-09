@@ -1,11 +1,12 @@
 import { connect, styled } from "frontity";
+import Link from "./link";
 import Nav from "./nav";
 
 function Header({ state }) {
   return (
     <Container>
       <SocialLinks>
-        {state.themes.SocialLinks.links.map((link, index) => (
+        {state.theme.SocialLinks.links.map((link, index) => (
           <SocialLink link={link.link} key={index}>
             {link.name}
           </SocialLink>
@@ -25,19 +26,19 @@ const Container = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 `;
 
 const SocialLinks = styled.ul`
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-`;
-
-const List = styled.li`
-  margin: 5px 10px;
-  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid black;
+  height: 50px;
+  margin: 0px;
 `;
 
 const SocialLink = styled(Link)`
   text-decoration: none;
+  margin: 10px 20px;
 `;

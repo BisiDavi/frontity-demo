@@ -1,5 +1,6 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
+import telephone from "../assets/telephone.png";
 import Logo from "./logo";
 
 function Nav({ state }) {
@@ -20,8 +21,12 @@ function Nav({ state }) {
         );
       })}
       <ContactLink>
-        <p>CALL US NOW</p>
-        <h4>0701 293 8242</h4>
+        <img src={telephone} alt="telephone" height="30px" width="30px" />
+        <span>
+          {" "}
+          <p>CALL US NOW</p>
+          <h4>0701 293 8242</h4>
+        </span>
       </ContactLink>
     </NavContainer>
   );
@@ -35,7 +40,7 @@ const NavContainer = styled.nav`
   justify-content: space-around;
 `;
 
-const NavLink = styled.div`
+const NavItem = styled.div`
     margin: 0 24px,
     color:black;
     font-size: 1em;
@@ -45,7 +50,7 @@ const NavLink = styled.div`
         line-height:2em;
         font-weight:500;
         
-        &[aria-current="page]{
+        &[aria-current="page"]{
             color: red;
         }
     }
@@ -53,12 +58,21 @@ const NavLink = styled.div`
 
 const ContactLink = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
   height: 50px;
 
-  & > h4 {
+  & > span > h4 {
     font-weight: bold;
-    margin: 2px 0px;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  & > span > p {
+    margin-bottom: 0px;
+    font-size: 16px;
+  }
+
+  & > span {
+    margin: 0px 10px;
   }
 `;
