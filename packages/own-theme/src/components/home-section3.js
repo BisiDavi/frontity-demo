@@ -52,17 +52,17 @@ const TextContent = styled.div`
 `;
 
 const List = styled.div`
-  & > h1 {
+  & h1 {
     color: ${colors.gold};
     font-size: 25px;
     font-weight: 800;
   }
 
-  & > p {
+  & p {
     text-transform: capitalize;
     color: ${colors.navy};
   }
-  & > span {
+  & span {
     position: absolute;
     top: 0;
     left: 0;

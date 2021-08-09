@@ -5,6 +5,7 @@ const colors = {
   glassy: "#E9F1F3",
   light: "#FCFCFC",
   warning: "#F91631",
+  gray: "#EEEEEE",
 };
 
 export default colors;

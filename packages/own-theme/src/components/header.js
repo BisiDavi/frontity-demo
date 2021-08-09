@@ -5,13 +5,7 @@ import Nav from "./nav";
 function Header({ state }) {
   return (
     <Container>
-      <SocialLinks>
-        {state.theme.SocialLinks.links.map((link, index) => (
-          <SocialLink link={link.link} key={index}>
-            {link.name}
-          </SocialLink>
-        ))}
-      </SocialLinks>
+      
       <Nav />
     </Container>
   );
@@ -29,16 +23,4 @@ const Container = styled.header`
   margin-bottom: 20px;
 `;
 
-const SocialLinks = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  border-bottom: 1px solid black;
-  height: 50px;
-  margin: 0px;
-`;
 
-const SocialLink = styled(Link)`
-  text-decoration: none;
-  margin: 10px 20px;
-`;
