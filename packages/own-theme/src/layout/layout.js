@@ -6,8 +6,10 @@ export default function Layout({ children }) {
   return (
     <Applayout className="layout">
       <Header />
-      {children}
-      <Footer />
+      <Main>
+        {children}
+        <Footer />
+      </Main>
     </Applayout>
   );
 }
@@ -15,4 +17,9 @@ export default function Layout({ children }) {
 const Applayout = styled.div`
   padding: 0;
   margin: 0;
+`;
+
+const Main = styled.main`
+  height: 100%;
+  width: 100%;
 `;

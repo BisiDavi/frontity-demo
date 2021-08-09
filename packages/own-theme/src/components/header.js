@@ -19,7 +19,7 @@ function Header({ state }) {
 
 export default connect(Header);
 
-const Container = styled.div`
+const Container = styled.header`
   width: 100%;
   background-color: white;
   height: 100px;
