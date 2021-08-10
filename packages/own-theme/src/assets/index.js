@@ -13,3 +13,4 @@ export { default as telephoneIcon } from "./telephone.png;";
 export { default as contactLens } from "./contactLens.png;";
 export { default as roundLogo } from "./logoRounded.png;";
 export { default as drug } from "./drug.png;";
+export { default as blogBanner } from "./blogBanner.png;";

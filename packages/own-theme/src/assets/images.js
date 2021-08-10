@@ -13,6 +13,7 @@ import {
   contactLens,
   roundLogo,
   drug,
+  blogBanner,
 } from "./index";
 
 const Images = {
@@ -30,6 +31,7 @@ const Images = {
   contactLens,
   roundLogo,
   drug,
+  blogBanner,
 };
 
 export default Images;
