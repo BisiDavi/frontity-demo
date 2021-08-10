@@ -1,7 +1,7 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 import travelling from "../assets/travelling.png";
 
-function HomeSection1({ state }) {
+function HomeSection1() {
   return (
     <Container>
       <TextContent>
@@ -26,7 +26,7 @@ function HomeSection1({ state }) {
   );
 }
 
-export default connect(HomeSection1);
+export default HomeSection1;
 
 const Container = styled.section`
   display: flex;

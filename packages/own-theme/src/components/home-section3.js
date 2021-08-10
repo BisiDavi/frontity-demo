@@ -1,10 +1,10 @@
-import { connect, styled } from "frontity";
+import {  styled } from "frontity";
 import bg from "../assets/bg.png";
 import roundLogo from "../assets/logoRounded.png";
 import colors from "../styles/colors";
 import parents from "../assets/parents.png";
 
-function HomeSection3({ data }) {
+function HomeSection3() {
   return (
     <Container>
       <Title>
@@ -36,7 +36,7 @@ function HomeSection3({ data }) {
   );
 }
 
-export default connect(HomeSection3);
+export default HomeSection3;
 
 const Container = styled.section`
   display: flex;

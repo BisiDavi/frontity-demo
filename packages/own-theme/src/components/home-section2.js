@@ -5,7 +5,15 @@ import sun from "../assets/sun.png";
 import vision from "../assets/vision.png";
 import colors from "../styles/colors";
 
-function HomeSection2({ data }) {
+function HomeSection2({ state, actions, libraries }) {
+  const data = state.source.get(state.router.link);
+  const post = state.source[data.type][data.id];
+
+  const HTML2React = libraries.html2react.Component;
+
+  console.log("post", post);
+  console.log("data", data);
+
   return (
     <Container>
       <h3>STEPS TO CLEAR VISION</h3>
@@ -50,7 +58,8 @@ export default connect(HomeSection2);
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding:50px;
   align-items: flex-start;
   background-color: white;
   position: relative;

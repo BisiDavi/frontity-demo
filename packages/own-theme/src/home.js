@@ -19,6 +19,12 @@ function Home({ state }) {
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400"
+          rel="stylesheet"
+        />
       </Head>
       <Global styles={globalStyles} />
       <Layout>
@@ -36,8 +42,7 @@ function Home({ state }) {
 const globalStyles = css`
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open sans", sans-serif;
   }
   a,
   a:visited {
