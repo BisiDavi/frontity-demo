@@ -4,21 +4,36 @@ import telephone from "../assets/telephone.png";
 import Logo from "./logo";
 
 function Nav({ state }) {
+  function navItem(name, link, visibility) {
+    const isCurrentPage = state.router.link === link;
+    return (
+      <NavItem style={{ display: visibility }} key={name}>
+        <Link link={link} aria-current={isCurrentPage ? "page" : "undefined"}>
+          {name}
+        </Link>
+      </NavItem>
+    );
+  }
+  function displayValidMenu(name, link) {
+    switch (name) {
+      case "HOME": {
+        return navItem(name, link);
+      }
+      case "OUR TEAM": {
+        return navItem(name, link);
+      }
+      case "PROCEDURES": {
+        return navItem(name, link);
+      }
+      default:
+        return navItem(name, link, "none");
+    }
+  }
   return (
     <NavContainer>
       <Logo />
       {state.theme.menu.map(([name, link]) => {
-        const isCurrentPage = state.router.link === link;
-        return (
-          <NavItem key={name}>
-            <Link
-              link={link}
-              aria-current={isCurrentPage ? "page" : "undefined"}
-            >
-              {name}
-            </Link>
-          </NavItem>
-        );
+        return displayValidMenu(name, link);
       })}
       <ContactLink>
         <img src={telephone} alt="telephone" height="30px" width="30px" />

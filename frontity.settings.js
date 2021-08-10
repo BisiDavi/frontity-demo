@@ -2,7 +2,7 @@ const settings = {
   name: "demo-frontity",
   state: {
     frontity: {
-      url: "https://awesome-hair-store.000webhostapp.com",
+      url: "https://davidolubisi.wordpress.com",
       title: "Getting Started with Test Frontity Blog",
       description: "WordPress installation for Frontity development",
     },
@@ -14,8 +14,11 @@ const settings = {
         theme: {
           menu: [
             ["HOME", "/"],
-            ["OUR TEAM", "/our-team"],
-            ["PROCEDURES", "/procedures"],
+            ["OUR TEAM", "/category/our-team"],
+            ["PROCEDURES", "/category/procedures"],
+            ["BLOGS", "/category/blog"],
+            ["TESTIMONIALS", "/category/testimonials"],
+            ["CONTACT-LENS", "/category/contact-lens"],
           ],
           featured: {
             showOnList: false,
@@ -35,7 +38,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: "https://awesome-hair-store.000webhostapp.com", 
+          url: "https://davidolubisi.wordpress.com",
         },
       },
     },
