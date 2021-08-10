@@ -1,4 +1,9 @@
-import ProceduresBanner from "../components/proceduresBanner";
 export { default as wavesImg } from "./waves.png";
 export { default as proceduresBannerImg } from "./proceduresBanner.png";
+export { default as proceduresImg1 } from "./procedureImg1.png";
 export { default as scrollIcon } from "./scroll.png";
+export { default as cataractIcon } from "./cataractIcon.png";
+export { default as eyeIcon } from "./eyeIcon.png";
+export { default as cosmeticsIcon } from "./cosmeticsIcon.png";
+export { default as visionIcon } from "./visionIcon.png";
+export { default as wavvyBlueImg } from "./wavvyBlue.png;";
