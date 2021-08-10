@@ -3,6 +3,7 @@ import waves from "../assets/waves.png";
 import consulting from "../assets/consulting.png";
 import sun from "../assets/sun.png";
 import vision from "../assets/vision.png";
+import colors from "../styles/colors";
 
 function HomeSection2({ data }) {
   return (
@@ -19,7 +20,6 @@ function HomeSection2({ data }) {
             options and our recommendations. We also go over all of your
             financing options at that time!
           </p>
-          <hr />
         </Card>
         <Card>
           <img src={vision} alt="vision icon" />
@@ -29,7 +29,6 @@ function HomeSection2({ data }) {
             minutes. The entire process is painless and you'll back to normal
             within a few hours!
           </p>
-          <hr />
         </Card>
         <Card>
           <img src={sun} alt="sun icon" />
@@ -40,7 +39,6 @@ function HomeSection2({ data }) {
             you'll have more money for what you love, and more time for who you
             love!
           </p>
-          <hr />
         </Card>
       </CardGroup>
     </Container>
@@ -56,7 +54,14 @@ const Container = styled.section`
   align-items: flex-start;
   background-color: white;
   position: relative;
+  background-position: center;
+  align-items: center;
   background-image: url(${waves});
+  background-size: cover;
+
+  & h3 {
+    font-size: 30px;
+  }
 `;
 
 const LeftWaveDesign = styled.img`
@@ -75,6 +80,8 @@ const CardGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  margin: 30px auto;
 `;
 
 const Card = styled.div`
@@ -82,7 +89,39 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  border-radius: 10px;
   padding: 30px;
   background-color: #e9f1f3;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  & img {
+    display: flex;
+    align-items: center;
+    background-color: ${colors.gold};
+    margin: auto;
+    border-radius: 50%;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  & h2 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  & hr {
+    background-color: red;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+  }
 `;

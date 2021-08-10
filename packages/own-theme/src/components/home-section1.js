@@ -5,6 +5,7 @@ function HomeSection1({ state }) {
   return (
     <Container>
       <TextContent>
+        <hr />
         <h5>LEAVE BLURRY VISION BEHIND</h5>
         <h3>
           THE FUTURE IS <b>BRIGHT,</b>
@@ -30,14 +31,42 @@ export default connect(HomeSection1);
 const Container = styled.section`
   display: flex;
   justify-content: space-around;
-  margin: 100px;
+  padding: 100px;
   background-color: #e5e5e5;
 `;
 
 const TextContent = styled.div`
   display: flex;
-  border-top: 1px solid black;
   flex-direction: column;
+  width: 50%;
+
+  & h5 {
+    letter-spacing: 5px;
+    margin: 10px 0px;
+    margin-top: 30px;
+  }
+
+  & h3 {
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 2px;
+    line-height: 32px;
+  }
+
+  & hr {
+    width: 40%;
+    left: 0p;
+    left: 0px;
+    position: absolute;
+    font-weight: bold;
+  }
+
+  & p {
+    width: 50%;
+    line-height: 25px;
+    font-size: 20px;
+    font-family: monospace;
+  }
 `;
 
 const FeaturedImage = styled.div`

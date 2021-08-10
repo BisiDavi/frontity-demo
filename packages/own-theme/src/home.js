@@ -10,7 +10,8 @@ import HomeSection4 from "./components/home-section4";
 import HomeSection5 from "./components/home-section5";
 
 function Home({ state }) {
-  const data = state.source.globalStyles(state.router.link);
+  const data = state.source.get(state.router.link);
+
   console.log("data", data);
   return (
     <>
