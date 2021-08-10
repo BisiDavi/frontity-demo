@@ -7,6 +7,12 @@ import {
   visionIcon,
   proceduresImg1,
   wavvyBlueImg,
+  clinicialImg,
+  emailIcon,
+  telephoneIcon,
+  contactLens,
+  roundLogo,
+  drug,
 } from "./index";
 
 const Images = {
@@ -18,6 +24,12 @@ const Images = {
   visionIcon,
   proceduresImg1,
   wavvyBlueImg,
+  clinicialImg,
+  emailIcon,
+  telephoneIcon,
+  contactLens,
+  roundLogo,
+  drug,
 };
 
 export default Images;
