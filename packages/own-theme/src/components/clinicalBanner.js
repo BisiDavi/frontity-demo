@@ -21,6 +21,7 @@ const Container = styled.section`
   background-image: url(${Images.clinicialImg});
   background-size: cover;
   flex-direction: column;
+  background-position: center;
   height: 800px;
   color: white;
 
