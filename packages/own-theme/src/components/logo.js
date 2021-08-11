@@ -1,9 +1,13 @@
+import { connect } from "frontity";
 import logo from "../assets/logo.png";
+import Link from "./link";
 
-export default function Logo() {
+function Logo({ state }) {
   return (
-    <div className="logo">
+    <Link link={state.theme.logo.link}>
       <img src={logo} alt="logo" height="70px" width="200px" />
-    </div>
+    </Link>
   );
 }
+
+export default connect(Logo);

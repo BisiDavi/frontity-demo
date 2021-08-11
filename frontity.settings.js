@@ -12,13 +12,12 @@ const settings = {
       name: "@frontity/own-theme",
       state: {
         theme: {
+          logo: { link: "/" },
           menu: [
-            ["HOME", "/"],
-            ["OUR TEAM", "/category/our-team"],
-            ["PROCEDURES", "/category/procedures"],
-            ["BLOGS", "/category/blog"],
-            ["TESTIMONIALS", "/category/testimonials"],
-            ["CONTACT-LENS", "/category/contact-lens"],
+            ["CLINICAL TRIALS", "/clinical-trials"],
+            ["PROCEDURES", "/procedures"],
+            ["CONTACT LENS", "/contact-lens"],
+            ["OUR TEAM", "/our-team"],
           ],
           featured: {
             showOnList: false,
@@ -31,6 +30,17 @@ const settings = {
               { link: "#instagram", name: "instagram" },
             ],
           },
+          footerLinks: [
+            { name: "CLINICAL TRIALS", link: "/clinical-trials" },
+            { name: "PROCEDURES", link: "/procedures" },
+            { name: "CONTACT-LENS", link: "/contact-lens" },
+            { name: "PROVIDER PORTAL", link: "/provider-portal" },
+            {
+              name: "SCHEDULE CONSULTATION",
+              link: "/schedule-consultation",
+            },
+            { name: "BLOG", link: "/blog" },
+          ],
         },
       },
     },

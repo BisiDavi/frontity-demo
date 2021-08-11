@@ -1,13 +1,25 @@
-export default function TeamSection3() {
+import { connect, styled } from "frontity";
+import Images from "../assets/images";
+
+function TeamSection3({ state, actions, libraries }) {
+  const data = state.source.get(state.router.link);
+  const items = data?.items;
+  // const post = state.source[data.id]?.items;
+
+  console.log("items", items);
+  console.log("data", data);
+
   return (
-    <div className="bioStory">
-      <hr />
-      <h3>BIO STORY</h3>
-      <img src="/dots.png" alt="dots" className="dots" />
+    <Section className="bioStory">
+      <div className="title">
+        <hr />
+        <h3>BIO STORY</h3>
+      </div>
+      <img src={Images.dots} alt="dots" className="dots" />
       <div className="stories">
         <div className="story">
           <div className="author">
-            <img src="/doctor1.png" alt="doctor" />
+            <img src={Images.doctor1} alt="doctor" />
             <h4>DR STEVE BAGAN, MD</h4>
           </div>
           <div className="text">
@@ -29,7 +41,7 @@ export default function TeamSection3() {
       <div className="stories">
         <div className="story">
           <div className="author">
-            <img src="/doctor2.png" alt="doctor" />
+            <img src={Images.doctor2} alt="doctor" />
             <h4>DR TOM STRINDEN, MD</h4>
           </div>
           <div className="text">
@@ -53,7 +65,7 @@ export default function TeamSection3() {
       <div className="stories">
         <div className="story">
           <div className="author">
-            <img src="/doctor3.png" alt="doctor" />
+            <img src={Images.doctor3} alt="doctor" />
             <h4>DR SARAH SWANHOLM, MD</h4>
           </div>
           <div className="text">
@@ -79,7 +91,42 @@ export default function TeamSection3() {
         </div>
       </div>
       <img src="/bluewaves.png" alt="waves" className="bluewaves" />
-      <img src="/dots.png" alt="dots" className="dots" />
-    </div>
+      <img src={Images.dots} alt="dots" className="dots" />
+    </Section>
   );
 }
+
+export default connect(TeamSection3);
+
+const Section = styled.section`
+  & .stories {
+    display: flex;
+    justify-content: center;
+    padding: 0px 40;
+    align-items: center;
+  }
+
+  & .story {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background-color: #e9f1f3;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  & .story > .author {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px;
+  }
+  & .author > img {
+    height: 150px;
+  }
+
+  &.text {
+    line-height: 25px;
+    font-size: 20px;
+    font-family: "Poppins";
+  }
+`;

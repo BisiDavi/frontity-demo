@@ -19,3 +19,8 @@ export { default as staff } from "./staff.png";
 export { default as team1 } from "./team1.png";
 export { default as team2 } from "./team2.png";
 export { default as teambg } from "./ourteambg.png";
+export { default as doctorsbg } from "./doctorsbg.png";
+export { default as dots } from "./dot.png";
+export { default as doctor1 } from "./doctor1.png";
+export { default as doctor2 } from "./doctor2.png";
+export { default as doctor3 } from "./doctor3.png";

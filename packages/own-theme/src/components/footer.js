@@ -41,12 +41,11 @@ function Footer({ state, bg = colors.gray }) {
           </Contact>
           <hr />
           <FooterLinks>
-            <Link link="#">CLINICAL TRIALS</Link>
-            <Link link="#">CONSTACT LENS </Link>
-            <Link link="#">PROVIDER PORTAL</Link>
-            <Link link="#">BLOG</Link>
-            <Link link="#">CONTACT</Link>
-            <Link link="#">PRIVACY POLICY</Link>
+            {state.theme.footerLinks.map((footerLink, index) => (
+              <Link key={index} link={footerLink.link}>
+                {footerLink.name}
+              </Link>
+            ))}
           </FooterLinks>
           <hr />
           <SocialIcons />

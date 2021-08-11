@@ -4,7 +4,7 @@ import telephone from "../assets/telephone.png";
 import Logo from "./logo";
 
 function Nav({ state }) {
-  function navItem(name, link, visibility) {
+  function displaynavLinks(name, link, visibility) {
     const isCurrentPage = state.router.link === link;
     return (
       <NavItem style={{ display: visibility }} key={name}>
@@ -14,26 +14,12 @@ function Nav({ state }) {
       </NavItem>
     );
   }
-  function displayValidMenu(name, link) {
-    switch (name) {
-      case "HOME": {
-        return navItem(name, link);
-      }
-      case "OUR TEAM": {
-        return navItem(name, link);
-      }
-      case "PROCEDURES": {
-        return navItem(name, link);
-      }
-      default:
-        return navItem(name, link, "none");
-    }
-  }
+
   return (
     <NavContainer>
       <Logo />
       {state.theme.menu.map(([name, link]) => {
-        return displayValidMenu(name, link);
+        return displaynavLinks(name, link);
       })}
       <ContactLink>
         <img src={telephone} alt="telephone" height="30px" width="30px" />

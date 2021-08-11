@@ -14,13 +14,11 @@ export default function TeamSection1() {
         </h3>
         <p>
           With
-          <span>
-            {" "}
-            <p>25 YEARS</p>
-          </span>
+          <span><a>25 YEARS</a></span>
           in practice we have a wealth of <b>experience</b>
         </p>
       </div>
+      <img className="dots" src={Images.dots} alt="dotted" />
     </Section>
   );
 }
@@ -35,6 +33,13 @@ const Section = styled.section`
 
   & img {
     height: 450px;
+  }
+
+  & img.dots {
+    height: unset;
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
   }
 
   & hr {
@@ -83,11 +88,12 @@ const Section = styled.section`
     z-index: 1;
   }
 
-  & .text-content span p {
+  & .text-content span a {
     color: ${colors.gold};
     z-index: 2;
     font-weight: bold;
     margin: 0px 5px;
     position: relative;
+    text-decoration: none;
   }
 `;

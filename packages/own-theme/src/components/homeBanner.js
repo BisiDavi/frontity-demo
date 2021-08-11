@@ -1,5 +1,6 @@
 import { connect, styled } from "frontity";
 
+import Link from "./link";
 import bannerImg from "../assets/homeBanner.png";
 import scroll from "../assets/scroll.png";
 
@@ -14,7 +15,9 @@ function HomeBanner({ state }) {
           <p>LASIK & CATARACT SURGEONS</p>
         </span>
         <ButtonGroup>
-          <button>Schedule a consultation</button>
+          <Link link="/schedule-consultation">
+            <button>Schedule a consultation</button>
+          </Link>
           <button>Take a self test</button>
         </ButtonGroup>
         <Scroll>
@@ -65,7 +68,7 @@ const Bannercontent = styled.div`
 `;
 
 const ButtonGroup = styled.div`
-  display: flex;  
+  display: flex;
   & button {
     padding: 25px 40px;
     font-size: 20px;

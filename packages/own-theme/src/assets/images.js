@@ -19,6 +19,11 @@ import {
   teambg,
   staff,
   scrollBlack,
+  doctorsbg,
+  dots,
+  doctor1,
+  doctor2,
+  doctor3,
 } from "./index";
 
 const Images = {
@@ -41,7 +46,12 @@ const Images = {
   team2,
   teambg,
   staff,
+  doctorsbg,
   scrollBlack,
+  dots,
+  doctor1,
+  doctor2,
+  doctor3,
 };
 
 export default Images;

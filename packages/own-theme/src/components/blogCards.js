@@ -1,29 +1,29 @@
 import { styled } from "frontity";
 
-export function BigBlogCard(content) {
+export function BigBlogCard({ content }) {
   return (
     <Card>
       {content.inverted ? (
-        <Text>
+        <div className="text">
           <p>{content.date}</p>
           <h1>{content.title}</h1>
           <hr />
           <h5>{content.author}</h5>
           <p>{content.text}</p>
-        </Text>
+        </div>
       ) : (
         <img src={content.img} alt={content.title} />
       )}
       {content.inverted ? (
         <img src={content.img} alt={content.title} />
       ) : (
-        <Text>
+        <div className="text">
           <p>{content.date}</p>
           <h1>{content.title}</h1>
           <hr />
           <h5>{content.author}</h5>
           <p>{content.text}</p>
-        </Text>
+        </div>
       )}
     </Card>
   );
@@ -32,9 +32,13 @@ export function BigBlogCard(content) {
 const Card = styled.div`
   display: flex;
   align-items: center;
+
+  & .text {
+    display: flex;
+  }
 `;
 
-export default function SmallBlogCards() {
+export default function SmallBlogCards({ content }) {
   return (
     <SmallCard>
       <img src={content.img} alt={content.title} />
