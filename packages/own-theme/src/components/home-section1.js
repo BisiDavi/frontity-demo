@@ -1,5 +1,6 @@
 import { styled } from "frontity";
 import travelling from "../assets/travelling.png";
+import colors from "../styles/colors";
 
 function HomeSection1() {
   return (
@@ -18,6 +19,7 @@ function HomeSection1() {
           Many of us have had LASIK and know how life changing it is see life
           clearly.{" "}
         </p>
+        <button>Schedule a consultation</button>
       </TextContent>
       <FeaturedImage>
         <img src={travelling} alt="travelling friends" />
@@ -39,11 +41,12 @@ const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  font-family: "Poppins", sans-serif;
 
   & h5 {
     letter-spacing: 5px;
     margin: 10px 0px;
-    margin-top: 30px;
+    margin: 15px 0px;
   }
 
   & h3 {
@@ -66,6 +69,16 @@ const TextContent = styled.div`
     line-height: 25px;
     font-size: 20px;
     font-family: monospace;
+  }
+
+  & button {
+    height: 50px;
+    background-color: ${colors.navy};
+    width: 300px;
+    color: white;
+    margin-top: 100px;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
   }
 `;
 

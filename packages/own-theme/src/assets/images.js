@@ -14,6 +14,11 @@ import {
   roundLogo,
   drug,
   blogBanner,
+  team1,
+  team2,
+  teambg,
+  staff,
+  scrollBlack,
 } from "./index";
 
 const Images = {
@@ -32,6 +37,11 @@ const Images = {
   roundLogo,
   drug,
   blogBanner,
+  team1,
+  team2,
+  teambg,
+  staff,
+  scrollBlack,
 };
 
 export default Images;

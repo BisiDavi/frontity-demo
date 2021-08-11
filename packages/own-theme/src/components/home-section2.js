@@ -59,7 +59,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding:50px;
+  padding: 50px;
   align-items: flex-start;
   background-color: white;
   position: relative;
@@ -69,7 +69,9 @@ const Container = styled.section`
   background-size: cover;
 
   & h3 {
+    font-family: "Poppins", sans-serif;
     font-size: 30px;
+    font-weight: 500;
   }
 `;
 

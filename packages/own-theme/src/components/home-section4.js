@@ -12,46 +12,53 @@ function HomeSection4({ state }) {
       <h3>TESTIMONIALS</h3>
       <InnerContainer>
         <FullTestimonial>
-          <img src={quoteIcon} alt="" />
-          <article>
-            <img src={testimonial0} alt="testimonial0" />
-            <p>
-              My dad had cataract surgery from Dr. Strinden last month and it
-              was so incredible. Dad doesn't normally handle surgery or doctor's
-              visits well but Dr. Strinden and his staff were able make him feel
-              comfortable and confident about the procedure. They are truly
-              gifted! We are so grateful for Dr. Tom and his whole team.
-            </p>
-          </article>
+          <img src={testimonial0} alt="testimonial0" />
+          <h3>Ann Tsvetaeva</h3>
+          <Text>
+            <img src={quoteIcon} alt="" />
+            <article>
+              <p>
+                My dad had cataract surgery from Dr. Strinden last month and it
+                was so incredible. Dad doesn't normally handle surgery or
+                doctor's visits well but Dr. Strinden and his staff were able
+                make him feel comfortable and confident about the procedure.
+                They are truly gifted! We are so grateful for Dr. Tom and his
+                whole team.
+              </p>
+            </article>
+          </Text>
         </FullTestimonial>
-        <TestmonialsGroup>
-          <img src={testimonial1} alt="testimonial1" />
-          <p>
-            “Dr. Strinden performed my LASIK surgery last month and I'm loving
-            the results. I can't believe I didn't have it done sooner. Thank you
-            to Dr. Tom, Melanie and the staff for an all around awesome
-            experience!”
-          </p>
-        </TestmonialsGroup>
-        <TestmonialsGroup>
-          <img src={testimonial2} alt="testimonial2" />
-          <p>
-            “One eye 20/20 one eye to go:) in 2002 I had the lowest bidder
-            attempt LASIK on my eyes. It was a place in Hawaii, and they messed
-            up on both eyes unfortunately. Dr. Tom Strinden and his crew did an
-            outstanding job on my left eye with PRK, cant wait to get the right
-            eye done, its been un-correctable, and un-corrected for 16 yrs.”
-          </p>
-        </TestmonialsGroup>
-        <TestmonialsGroup>
-          <img src={testimonial3} alt="testimonial3" />
-          <p>
-            “After almost 30 years in corrective eyewear, I took the leap to get
-            my vision corrected once and for all. No regrets! The entire staff
-            is welcoming, and makes you comfortable throughout the entire
-            process. Thank you a million times over!”
-          </p>
-        </TestmonialsGroup>
+        <Column>
+          <TestmonialsGroup>
+            <img src={testimonial1} alt="testimonial1" />
+            <p>
+              “Dr. Strinden performed my LASIK surgery last month and I'm loving
+              the results. I can't believe I didn't have it done sooner. Thank
+              you to Dr. Tom, Melanie and the staff for an all around awesome
+              experience!”
+            </p>
+          </TestmonialsGroup>
+          <TestmonialsGroup>
+            <img src={testimonial2} alt="testimonial2" />
+            <p>
+              “One eye 20/20 one eye to go:) in 2002 I had the lowest bidder
+              attempt LASIK on my eyes. It was a place in Hawaii, and they
+              messed up on both eyes unfortunately. Dr. Tom Strinden and his
+              crew did an outstanding job on my left eye with PRK, cant wait to
+              get the right eye done, its been un-correctable, and un-corrected
+              for 16 yrs.”
+            </p>
+          </TestmonialsGroup>
+          <TestmonialsGroup>
+            <img src={testimonial3} alt="testimonial3" />
+            <p>
+              “After almost 30 years in corrective eyewear, I took the leap to
+              get my vision corrected once and for all. No regrets! The entire
+              staff is welcoming, and makes you comfortable throughout the
+              entire process. Thank you a million times over!”
+            </p>
+          </TestmonialsGroup>
+        </Column>
       </InnerContainer>
     </Container>
   );
@@ -60,11 +67,18 @@ function HomeSection4({ state }) {
 export default connect(HomeSection4);
 
 const Container = styled.section`
-  background-color: ${colors.light};
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   display: flex;
   height: 500px;
+  padding: 100px 200px;
+  flex-direction: column;
+
+  & h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -77,9 +91,16 @@ const InnerContainer = styled.div`
 const FullTestimonial = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  & h4 {
+  & img{
+    margin:auto;
+  }
+
+  & h3 {
     font-weight: bold;
+    text-align:center
     font-size: 20px;
   }
 `;
@@ -89,4 +110,34 @@ const TestmonialsGroup = styled.div`
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid black;
+
+  & img {
+    margin: 0px 20px;
+  }
+`;
+
+const Text = styled.div`
+  display: flex;
+  align-items: flex-start;
+  width: 80%;
+  justify-content: center;
+
+  & article {
+    margin: 0px 20px;
+  }
+
+  & article p {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    font-family: "Open Sans";
+  }
+
+  & img {
+    margin: unset;
+  }
+`;
+
+const Column = styled.div`
+  flex-direction: column;
 `;

@@ -49,9 +49,16 @@ const Container = styled.section`
   background-size: cover;
   width: 100%;
   padding: 100px 0px;
+  justify-content: flex-start;
+  height: 1200px;
 
   & h2 {
     text-align: center;
+    margin: 100px auto;
+    font-weight: 500;
+    margin-top: 160px;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
   }
 `;
 
@@ -63,13 +70,14 @@ const Title = styled.div`
     margin-right: 5px;
     position:absolute;
     right:0px;
-    top:60px;
+    top:120px;
 
   & h3{
     font-size:16px;
     font-family;"Open-sans", sans-serif;
     line-height:16px;
     letter-spacing:3px;
+    font-family: 'Poppins', sans-serif;
   }
 
   & hr {
@@ -82,24 +90,30 @@ const InnerContainer = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
 `;
 
 const Column = styled.div`
   display: flex;
+  margin: 10px 50px;
   flex-direction: column;
 `;
 
 const FeaturedImage = styled.div`
-  position: relative;
+  margin: auto 60px;
+
+  & img {
+    height: 800px;
+    width: 1000px;
+  }
 `;
 
 const TextContent = styled.div`
   flex-direction: column;
   height: 70px;
   position: relative;
-  margin: 10px 0px;
-  width: 200px;
+  margin: 50px;
+  width: 300px;
   position: relative;
 
   & span {
@@ -107,8 +121,8 @@ const TextContent = styled.div`
     z-index: 1;
     top: 0;
     left: 0;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     background-color: white;
     border-radius: 50%;
   }
@@ -118,9 +132,11 @@ const TextContent = styled.div`
     z-index: 2;
     text-align: left;
     margin: 0px;
-    margin-left: 20px;
+    margin-left: 40px;
     position: relative;
-    margin-top: 10px;
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500px;
   }
 
   & h5 {
@@ -129,29 +145,10 @@ const TextContent = styled.div`
     margin: 5px;
     font-size: 10px;
     line-height: 20px;
-    margin-left: 20px;
+    margin-left: 40px;
     letter-spacing: 2px;
     position: relative;
-  }
-`;
-
-const List = styled.div`
-  & h1 {
-    color: ${colors.gold};
-    font-size: 25px;
-    font-weight: 800;
-  }
-
-  & p {
-    text-transform: capitalize;
-    color: ${colors.navy};
-  }
-  & span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: ${colors.light};
-    height: 100px;
-    width: 100px;
+    font-size: 16px;
+    font-weight: 300px;
   }
 `;

@@ -11,7 +11,6 @@ export default function BlogBanner() {
 
 const Container = styled.section`
   background-image: url(${Images.blogBanner});
-  
 
   & h1 {
     color: white;

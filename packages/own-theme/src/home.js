@@ -1,7 +1,4 @@
-import { Global, css, Head, connect } from "frontity";
-
 import Layout from "./layout/layout";
-import Title from "./components/title";
 import HomeBanner from "./components/homeBanner";
 import HomeSection1 from "./components/home-section1";
 import HomeSection2 from "./components/home-section2";
@@ -9,46 +6,17 @@ import HomeSection3 from "./components/home-section3";
 import HomeSection4 from "./components/home-section4";
 import HomeSection5 from "./components/home-section5";
 
-function Home({ state }) {
-  const data = state.source.get(state.router.link);
-
-  console.log("data", data);
+function Home() {
   return (
-    <>
-      <Title />
-      <Head>
-        <meta name="description" content={state.frontity.description} />
-        <html lang="en" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400"
-          rel="stylesheet"
-        />
-      </Head>
-      <Global styles={globalStyles} />
-      <Layout>
-        <HomeBanner />
-        <HomeSection1 />
-        <HomeSection2 />
-        <HomeSection3 />
-        <HomeSection4 />
-        <HomeSection5 />
-      </Layout>
-    </>
+    <Layout>
+      <HomeBanner />
+      <HomeSection1 />
+      <HomeSection2 />
+      <HomeSection3 />
+      <HomeSection4 />
+      <HomeSection5 />
+    </Layout>
   );
 }
 
-const globalStyles = css`
-  body {
-    margin: 0;
-    font-family: "Open sans", sans-serif;
-  }
-  a,
-  a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-`;
-
-export default connect(Home);
+export default Home;

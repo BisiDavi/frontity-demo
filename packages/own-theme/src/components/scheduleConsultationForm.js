@@ -1,6 +1,6 @@
 import { styled } from "frontity";
 import colors from "../styles/colors";
-import { Input, CheckBox } from "./form-input";
+import { Input, CheckBox, TextArea } from "./form-input";
 
 export default function ScheduleConsultationForm() {
   const formInputArray = [
