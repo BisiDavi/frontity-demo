@@ -40,12 +40,14 @@ function Main({ state }) {
       <Global styles={globalStyles} />
       <Switch>
         <Loading when={data.isFetching} />
-        <Procedures when={data.route === "/procedures/"} />
-        <Team when={data.route === "/our-team/"} />
-        <Blog when={data.route === "/blog/"} />
-        <ContactLens when={data.route === "/contact-lens/"} />
-        <ClinicalTrials when={data.route === "/clinical-trials/"} />
-        <Scheduleconsultation when={data.route === "/schedule-consultation/"} />
+        <Procedures when={data.route === "/category/procedures/"} />
+        <Team when={data.route === "/category/our-team/"} />
+        <Blog when={data.route === "/category/blog/"} />
+        <ContactLens when={data.route === "/category/contact-lens/"} />
+        <ClinicalTrials when={data.route === "/category/clinical-trials/"} />
+        <Scheduleconsultation
+          when={data.route === "/category/schedule-consultation/"}
+        />
         <PageError when={data.isError} />
         <Home when={data.isHome} />
       </Switch>

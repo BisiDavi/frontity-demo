@@ -1,10 +1,10 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 
 import Link from "./link";
 import bannerImg from "../assets/homeBanner.png";
 import scroll from "../assets/scroll.png";
 
-function HomeBanner({ state }) {
+function HomeBanner() {
   return (
     <Banner>
       <Bannercontent>
@@ -15,7 +15,7 @@ function HomeBanner({ state }) {
           <p>LASIK & CATARACT SURGEONS</p>
         </span>
         <ButtonGroup>
-          <Link link="/schedule-consultation">
+          <Link link="/category/schedule-consultation">
             <button>Schedule a consultation</button>
           </Link>
           <button>Take a self test</button>
@@ -28,7 +28,7 @@ function HomeBanner({ state }) {
   );
 }
 
-export default connect(HomeBanner);
+export default HomeBanner;
 
 const Banner = styled.div`
   display: flex;

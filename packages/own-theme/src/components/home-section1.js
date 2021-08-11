@@ -1,6 +1,7 @@
 import { styled } from "frontity";
 import travelling from "../assets/travelling.png";
 import colors from "../styles/colors";
+import Link from "./link";
 
 function HomeSection1() {
   return (
@@ -19,7 +20,9 @@ function HomeSection1() {
           Many of us have had LASIK and know how life changing it is see life
           clearly.{" "}
         </p>
-        <button>Schedule a consultation</button>
+        <Link link="/schedule-consultation/">
+          <button>Schedule a consultation</button>
+        </Link>
       </TextContent>
       <FeaturedImage>
         <img src={travelling} alt="travelling friends" />

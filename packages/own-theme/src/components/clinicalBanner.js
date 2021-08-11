@@ -19,11 +19,31 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-image: url(${Images.clinicialImg});
+  background-size: cover;
+  flex-direction: column;
+  height: 800px;
+  color: white;
 
   & button {
     border: 1px solid white;
     color: white;
     width: 300px;
     height: 60px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  & p {
+    font-size: 30px;
+    margin-top: 0;
+    letter-spacing: 10px;
+  }
+
+  & h1 {
+    font-size: 60px;
+    font-weight: normal;
+    margin: 10px auto;
   }
 `;

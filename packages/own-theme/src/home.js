@@ -1,3 +1,5 @@
+import { Head, connect } from "frontity";
+
 import Layout from "./layout/layout";
 import HomeBanner from "./components/homeBanner";
 import HomeSection1 from "./components/home-section1";
@@ -6,17 +8,22 @@ import HomeSection3 from "./components/home-section3";
 import HomeSection4 from "./components/home-section4";
 import HomeSection5 from "./components/home-section5";
 
-function Home() {
+function Home({ state }) {
   return (
-    <Layout>
-      <HomeBanner />
-      <HomeSection1 />
-      <HomeSection2 />
-      <HomeSection3 />
-      <HomeSection4 />
-      <HomeSection5 />
-    </Layout>
+    <>
+      <Head>
+        <meta name="description" content={state.frontity.description} />
+      </Head>
+      <Layout>
+        <HomeBanner />
+        <HomeSection1 />
+        <HomeSection2 />
+        <HomeSection3 />
+        <HomeSection4 />
+        <HomeSection5 />
+      </Layout>
+    </>
   );
 }
 
-export default Home;
+export default connect(Home);

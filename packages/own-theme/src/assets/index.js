@@ -24,3 +24,4 @@ export { default as dots } from "./dot.png";
 export { default as doctor1 } from "./doctor1.png";
 export { default as doctor2 } from "./doctor2.png";
 export { default as doctor3 } from "./doctor3.png";
+export { default as bgClinical } from "./bgclinical.png";

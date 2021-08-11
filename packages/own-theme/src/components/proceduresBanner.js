@@ -10,7 +10,7 @@ export default function ProceduresBanner() {
       <h5>LASIK & CATARACT SURGEONS</h5>
 
       <button>Take a self test</button>
-      <img src={Image.scroll} alt="scroll" />
+      <img src={Images.scroll} alt="scroll" />
     </Container>
   );
 }

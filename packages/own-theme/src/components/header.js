@@ -22,4 +22,7 @@ const Container = styled.header`
   flex-direction: column;
   margin-bottom: 20px;
   padding: 20px 0px;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 `;

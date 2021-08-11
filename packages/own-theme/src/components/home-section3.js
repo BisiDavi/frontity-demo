@@ -50,7 +50,7 @@ const Container = styled.section`
   width: 100%;
   padding: 100px 0px;
   justify-content: flex-start;
-  height: 1200px;
+  background-position: center;
 
   & h2 {
     text-align: center;

@@ -14,10 +14,10 @@ const settings = {
         theme: {
           logo: { link: "/" },
           menu: [
-            ["CLINICAL TRIALS", "/clinical-trials"],
-            ["PROCEDURES", "/procedures"],
-            ["CONTACT LENS", "/contact-lens"],
-            ["OUR TEAM", "/our-team"],
+            ["CLINICAL TRIALS", "/category/clinical-trials"],
+            ["PROCEDURES", "/category/procedures"],
+            ["CONTACT LENS", "/category/contact-lens"],
+            ["OUR TEAM", "/category/our-team"],
           ],
           featured: {
             showOnList: false,
@@ -31,15 +31,15 @@ const settings = {
             ],
           },
           footerLinks: [
-            { name: "CLINICAL TRIALS", link: "/clinical-trials" },
-            { name: "PROCEDURES", link: "/procedures" },
-            { name: "CONTACT-LENS", link: "/contact-lens" },
-            { name: "PROVIDER PORTAL", link: "/provider-portal" },
+            { name: "CLINICAL TRIALS", link: "/category/clinical-trials" },
+            { name: "PROCEDURES", link: "/category/procedures" },
+            { name: "CONTACT-LENS", link: "/category/contact-lens" },
+            { name: "PROVIDER PORTAL", link: "/category/provider-portal" },
             {
               name: "SCHEDULE CONSULTATION",
-              link: "/schedule-consultation",
+              link: "/category/schedule-consultation",
             },
-            { name: "BLOG", link: "/blog" },
+            { name: "BLOG", link: "/category/blog" },
           ],
         },
       },

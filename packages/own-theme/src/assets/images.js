@@ -24,6 +24,7 @@ import {
   doctor1,
   doctor2,
   doctor3,
+  bgClinical,
 } from "./index";
 
 const Images = {
@@ -52,6 +53,7 @@ const Images = {
   doctor1,
   doctor2,
   doctor3,
+  bgClinical,
 };
 
 export default Images;
