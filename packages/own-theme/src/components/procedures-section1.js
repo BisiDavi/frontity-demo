@@ -67,6 +67,14 @@ const Container = styled.section`
     color: white;
     font-size: 16px;
     padding: 20px;
+    margin: auto;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
   }
 
   & .inner-row {
@@ -77,8 +85,8 @@ const Container = styled.section`
   }
 
   & .row > .inner-row > span p {
-    line-height: 32px;
-    font-size: 24px;
+    line-height: 28px;
+    font-size: 20px;
     letter-spacing: 2px;
   }
 
