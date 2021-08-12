@@ -4,8 +4,8 @@ import colors from "../styles/colors";
 
 function HomeSection1() {
   return (
-    <Container>
-      <TextContent>
+    <Container className="container">
+      <div className="text-content">
         <hr />
         <h5>LEAVE BLURRY VISION BEHIND</h5>
         <h3>
@@ -19,10 +19,8 @@ function HomeSection1() {
           Many of us have had LASIK and know how life changing it is see life
           clearly.{" "}
         </p>
-      </TextContent>
-      <FeaturedImage>
-        <img src={travelling} alt="travelling friends" />
-      </FeaturedImage>
+      </div>
+      <img src={travelling} alt="travelling friends" />
     </Container>
   );
 }
@@ -34,13 +32,13 @@ const Container = styled.section`
   justify-content: space-around;
   padding: 100px;
   background-color: #e5e5e5;
-`;
 
-const TextContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  font-family: "Poppins", sans-serif;
+  & .text-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-family: "Poppins", sans-serif;
+  }
 
   & h5 {
     letter-spacing: 5px;
@@ -54,6 +52,10 @@ const TextContent = styled.div`
     margin: 0;
     letter-spacing: 2px;
     line-height: 32px;
+  }
+
+  & img {
+    height: 100%;
   }
 
   & hr {
@@ -80,8 +82,39 @@ const TextContent = styled.div`
     font-size: 20px;
     font-family: "Poppins", sans-serif;
   }
-`;
 
-const FeaturedImage = styled.div`
-  display: flex;
+  @media (max-width: 1000px) {
+    padding: 50px;
+
+    & img {
+      height: 100%;
+      width: 400px;
+    }
+    & .text-content > h5 {
+      font-size: 13px;
+    }
+    & .text-content > h3 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    & p {
+      width: 80%;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    & .text-content {
+      width: 100%;
+      margin: 20px 0px;
+      order: 2;
+    }
+    & img {
+      width: 100%;
+      order: 1;
+    }
+  }
 `;

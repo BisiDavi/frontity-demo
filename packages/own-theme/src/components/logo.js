@@ -5,7 +5,7 @@ import Link from "./link";
 function Logo({ state }) {
   return (
     <Link link={state.theme.logo.link}>
-      <img src={logo} alt="logo" height="70px" width="200px" />
+      <img src={logo} alt="logo"  width="200px" />
     </Link>
   );
 }

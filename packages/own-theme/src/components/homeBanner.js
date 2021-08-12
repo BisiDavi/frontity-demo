@@ -1,10 +1,10 @@
 import { styled } from "frontity";
-
 import bannerImg from "../assets/homeBanner.png";
 
 function HomeBanner() {
   return (
     <Banner>
+      {/* <Styles /> */}
       <Bannercontent>
         <span>
           <h1>
@@ -27,6 +27,7 @@ const Banner = styled.div`
   justify-content: center;
   background-size: cover;
   flex-direction: column;
+  background-position: center;
 `;
 
 const Bannercontent = styled.div`
@@ -54,28 +55,34 @@ const Bannercontent = styled.div`
     letter-spacing: 10px;
     line-height: 28px;
   }
-`;
 
-const ButtonGroup = styled.div`
-  display: flex;
-  & button {
-    padding: 25px 40px;
-    font-size: 20px;
-    font-weight: bold;
-    border: none;
-    margin: 0 30px;
+  @media (max-width: 1000px) {
+    & span > p {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    & span > h1 {
+      font-size: 45px;
+      line-height: 30px;
+    }
   }
 
-  & button:last-child {
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-  }
-`;
+  @media (max-width: 500px) {
+    height: 300px;
 
-const Scroll = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
+    & span > p {
+      font-size: 18px;
+      text-align: center;
+      line-height: 20px;
+      letter-spacing: 1px;
+      margin: 10px;
+    }
+
+    & span > h1 {
+      font-size: 25px;
+      line-height: 28px;
+      margin: 10px;
+    }
+  }
 `;

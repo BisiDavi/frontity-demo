@@ -33,7 +33,7 @@ const settings = {
           footerLinks: [
             { name: "CLINICAL TRIALS", link: "/category/clinical-trials" },
             { name: "PROCEDURES", link: "/category/procedures" },
-            { name: "CONTACT-LENS", link: "/category/contact-lens" },
+            { name: "CONTACT LENS", link: "/category/contact-lens" },
             { name: "BLOG", link: "/category/blog" },
           ],
         },

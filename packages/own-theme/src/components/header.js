@@ -5,7 +5,7 @@ import Nav from "./nav";
 function Header() {
   return (
     <Container id="header">
-      <SocialIcons />
+      <SocialIcons header />
       <Nav />
     </Container>
   );
@@ -20,7 +20,6 @@ const Container = styled.header`
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px 0px;
   position: sticky;
   top: 0px;
   box-shadow: -20px 0px 1px 1px #adadb7;

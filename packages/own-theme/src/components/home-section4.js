@@ -1,5 +1,4 @@
 import { connect, styled } from "frontity";
-import colors from "../styles/colors";
 import quoteIcon from "../assets/quoteIcon.png";
 import testimonial0 from "../assets/testimonial0.png";
 import testimonial1 from "../assets/testimonial1.png";
@@ -10,11 +9,11 @@ function HomeSection4({ state }) {
   return (
     <Container>
       <h3>TESTIMONIALS</h3>
-      <InnerContainer>
-        <FullTestimonial>
+      <div className="inner-container">
+        <div className="full-testimonial">
           <img src={testimonial0} alt="testimonial0" />
           <h3>Ann Tsvetaeva</h3>
-          <Text>
+          <div className="text">
             <img src={quoteIcon} alt="" />
             <article>
               <p>
@@ -26,10 +25,10 @@ function HomeSection4({ state }) {
                 whole team.
               </p>
             </article>
-          </Text>
-        </FullTestimonial>
-        <Column>
-          <TestmonialsGroup>
+          </div>
+        </div>
+        <div className="column">
+          <div className="testimonial-group">
             <img src={testimonial1} alt="testimonial1" />
             <p>
               “Dr. Strinden performed my LASIK surgery last month and I'm loving
@@ -37,8 +36,8 @@ function HomeSection4({ state }) {
               you to Dr. Tom, Melanie and the staff for an all around awesome
               experience!”
             </p>
-          </TestmonialsGroup>
-          <TestmonialsGroup>
+          </div>
+          <div className="testimonial-group">
             <img src={testimonial2} alt="testimonial2" />
             <p>
               “One eye 20/20 one eye to go:) in 2002 I had the lowest bidder
@@ -48,8 +47,8 @@ function HomeSection4({ state }) {
               get the right eye done, its been un-correctable, and un-corrected
               for 16 yrs.”
             </p>
-          </TestmonialsGroup>
-          <TestmonialsGroup>
+          </div>
+          <div className="testimonial-group">
             <img src={testimonial3} alt="testimonial3" />
             <p>
               “After almost 30 years in corrective eyewear, I took the leap to
@@ -57,9 +56,9 @@ function HomeSection4({ state }) {
               staff is welcoming, and makes you comfortable throughout the
               entire process. Thank you a million times over!”
             </p>
-          </TestmonialsGroup>
-        </Column>
-      </InnerContainer>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }
@@ -67,61 +66,61 @@ function HomeSection4({ state }) {
 export default connect(HomeSection4);
 
 const Container = styled.section`
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 500px;
-  padding: 100px 200px;
-  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 500px;
+    padding: 100px 200px;
+    flex-direction: column;
 
   & h3 {
     font-family: "Poppins", sans-serif;
     font-size: 30px;
     font-weight: 500;
   }
-`;
 
-const InnerContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-`;
-
-const FullTestimonial = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  & img{
+  & .inner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  }
+  
+  & .full-testimonial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ & .full-testimonial >  img{
     margin:auto;
   }
 
-  & h3 {
+  & .full-testimonial > h3 {
     font-weight: bold;
     text-align:center
     font-size: 20px;
   }
-`;
 
-const TestmonialsGroup = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid black;
-
-  & img {
+  & .testimonial-group {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  & .testimonial-group > img {
     margin: 0px 20px;
   }
-`;
 
-const Text = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 80%;
-  justify-content: center;
-
+  & .text {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    justify-content: center;
+  }
+  
   & article {
     margin: 0px 20px;
   }
@@ -133,11 +132,32 @@ const Text = styled.div`
     font-family: "Open Sans";
   }
 
-  & img {
+  & .text img {
     margin: unset;
   }
-`;
 
-const Column = styled.div`
-  flex-direction: column;
+  & .column {
+    flex-direction: column;
+  }
+
+  @media (max-width:1000px){
+    padding: 0px;
+
+    .column{
+      display: none;
+    }
+  }
+
+  @media (max-width:800px){
+    & h3 {
+    font-size: 24px;
+    margin: 40px auto;
+    }
+  }
+    @media (max-width:800px){
+    & h3 {
+    font-size: 24px;
+    margin: 40px auto;
+    }
+  }
 `;
