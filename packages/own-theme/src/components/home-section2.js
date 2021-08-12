@@ -147,4 +147,10 @@ const Container = styled.section`
       width: 100%;
     }
   }
+  @media (max-width: 500px) {
+    & .card-group {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
 `;

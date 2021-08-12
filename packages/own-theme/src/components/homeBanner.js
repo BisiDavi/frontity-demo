@@ -4,15 +4,12 @@ import bannerImg from "../assets/homeBanner.png";
 function HomeBanner() {
   return (
     <Banner>
-      {/* <Styles /> */}
-      <Bannercontent>
-        <span>
-          <h1>
-            SEE LIFE <b>CLEARLY</b>
-          </h1>
-          <p>LASIK & CATARACT SURGEONS</p>
-        </span>
-      </Bannercontent>
+      <span>
+        <h1>
+          SEE LIFE <b>CLEARLY</b>
+        </h1>
+        <p>LASIK & CATARACT SURGEONS</p>
+      </span>
     </Banner>
   );
 }
@@ -28,14 +25,6 @@ const Banner = styled.div`
   background-size: cover;
   flex-direction: column;
   background-position: center;
-`;
-
-const Bannercontent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
 
   & span > h1 {
     color: white;

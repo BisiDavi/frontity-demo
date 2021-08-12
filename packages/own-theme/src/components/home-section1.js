@@ -117,4 +117,9 @@ const Container = styled.section`
       order: 1;
     }
   }
+  @media (max-width: 800px) {
+    & p {
+      width: 100%;
+    }
+  }
 `;

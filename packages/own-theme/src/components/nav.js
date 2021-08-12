@@ -1,6 +1,5 @@
 import { connect, styled } from "frontity";
 import Link from "./link";
-import telephone from "../assets/telephone.png";
 import Logo from "./logo";
 
 function Nav({ state }) {
@@ -18,9 +17,11 @@ function Nav({ state }) {
   return (
     <NavContainer>
       <Logo />
-      {state.theme.menu.map(([name, link]) => {
-        return displaynavLinks(name, link);
-      })}     
+      <span className="menu-links">
+        {state.theme.menu.map(([name, link]) => {
+          return displaynavLinks(name, link);
+        })}
+      </span>
     </NavContainer>
   );
 }
@@ -30,13 +31,24 @@ export default connect(Nav);
 const NavContainer = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between; 
+  padding:0px 100px;
   border-top: 1px solid black;
 
   & .nav-item {
     margin: 0 24px,
     color:black;
     font-size: 1em;
+  }
+
+  & span.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  & span.menu-links > div{  
+      margin: 0px 30px;
   }
 
   & .nav-item  > a {
@@ -71,6 +83,8 @@ const NavContainer = styled.nav`
   }
 
   @media (max-width: 900px) {
+    padding:0px 10px;
+
     &  a{
       font-size: 14px;
     }
@@ -81,6 +95,8 @@ const NavContainer = styled.nav`
     & > span > p {
       font-size: 14px;
     }
-    
+     & span.menu-links > div {
+      margin: 0px 20px;
+    }
   }
 `;

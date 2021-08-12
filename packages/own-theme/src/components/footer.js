@@ -147,4 +147,19 @@ const Container = styled.footer`
       width: 20px;
     }
   }
+
+  @media (max-width: 500px) {
+    & .footer-group {
+      flex-direction: column;
+    }
+
+    .footer-group > hr {
+      display: none;
+    }
+
+    .footer-links {
+      width: unset;
+      grid-gap: 15px;
+    }
+  }
 `;

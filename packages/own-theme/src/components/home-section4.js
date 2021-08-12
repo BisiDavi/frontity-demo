@@ -154,10 +154,23 @@ const Container = styled.section`
     margin: 40px auto;
     }
   }
-    @media (max-width:800px){
+  @media (max-width:500px){
+    height: unset;
+    padding-bottom: 30px;
+    
     & h3 {
-    font-size: 24px;
-    margin: 40px auto;
+        margin: 10px 0px;
+        font-size: 20px;
     }
+    
+    & article p {
+    font-size: 15px;
+    line-height: 22px;
+    }
+    & .full-testimonial > h3 {
+    margin: 10px 0px;
+    font-size: 18px;
+    }
+
   }
 `;
