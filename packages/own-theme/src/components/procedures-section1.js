@@ -11,7 +11,7 @@ export default function ProceduresSection1() {
         <hr />
         <h1>PROCEDURES</h1>
       </div>
-      <div className="row">
+      <div className="row first">
         <div className="icons">
           <img src={Images.visionIcon} alt="vision" />
           <img src={Images.cataractIcon} alt="cataract" />
@@ -24,18 +24,19 @@ export default function ProceduresSection1() {
           alt="couple smiling while taking a selfie"
         />
       </div>
-      <div className="row">
-        <img src={Images.wavvyBlueImg} alt="wavvy icon" />
-        {proceduresContent.map((content, index) => (
-          <InnerRow key={index}>
-            <TitleCard content={content} />
-            <span>
-              <p>{content.text}</p>
-            </span>
-          </InnerRow>
-        ))}
+      <div className="content">
+        <div className="row">
+          {proceduresContent.map((content, index) => (
+            <div className="inner-row" key={index}>
+              <TitleCard content={content} />
+              <span>
+                <p>{content.text}</p>
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="button">Schedule a consultation</div>
       </div>
-      <div className="button">Schedule a consultation</div>
     </Container>
   );
 }
@@ -43,6 +44,7 @@ export default function ProceduresSection1() {
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+  padding-top: 80px;
 
   & .row {
     display: flex;
@@ -60,11 +62,6 @@ const Container = styled.section`
     grid-gap: 60px;
   }
 
-  & .main-img {
-    height: 100%;
-    width: 100%;
-  }
-
   & .button {
     background-color: ${colors.navy};
     color: white;
@@ -75,5 +72,38 @@ const Container = styled.section`
   & .inner-row {
     justify-content: space-around;
     margin: 20px auto;
+    display: flex;
+    align-items: center;
+  }
+
+  & .row > .inner-row > span p {
+    line-height: 32px;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  & .row > .inner-row > span {
+    width: 50%;
+  }
+
+  & .inner-row > div {
+    width: 30%;
+    margin: 0 40px;
+  }
+
+  & .content > .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & .row.first {
+    width: 80%;
+    align-items: center;
+  }
+
+  & .title hr {
+    width: 30%;
+    position: absolute;
+    left: 0;
   }
 `;
