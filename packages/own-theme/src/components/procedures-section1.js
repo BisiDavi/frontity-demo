@@ -123,4 +123,38 @@ const Container = styled.section`
     letter-spacing: 10px;
     margin-left: 200px;
   }
+
+  @media (max-width: 1000px) {
+    & .row.first {
+      padding: 0;
+    }
+
+    & .title > hr {
+      width: 35%;
+    }
+
+    & .title > h4 {
+      margin-left: 80px;
+    }
+
+    && .row.first > img.main-img {
+      order: 2;
+      height: 50%;
+      width: 50%;
+    }
+
+    & .row.first > .icons {
+      order: 1;
+      margin: 40px;
+      grid-gap: 50px;
+    }
+
+    & .row.first > .icons > img {
+      height: 80px;
+    }
+
+    & .title hr {
+      width: 30%;
+    }
+  }
 `;

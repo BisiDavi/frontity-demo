@@ -47,4 +47,8 @@ const Container = styled.section`
     border: 1px solid white;
     background-color: transparent;
   }
+
+  @media (max-width: 1000px) {
+    height: 500px;
+  }
 `;

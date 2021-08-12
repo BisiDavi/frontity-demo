@@ -155,6 +155,9 @@ const MobileMenu = styled.div`
     width: 100%;
     background-color: white;
     justify-content: center;
+    background-image: url(${Images.mobileMenuBg});
+    background-position: left;
+    background-size: cover;
 
     & img {
       position: absolute;

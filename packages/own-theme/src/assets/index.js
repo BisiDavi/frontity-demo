@@ -27,5 +27,6 @@ export { default as doctor3 } from "./doctor3.png";
 export { default as bgClinical } from "./bgclinical.png";
 export { default as menuIcon } from "./menuIcon.png";
 export { default as cancelIcon } from "./cancelIcon.png";
+export { default as mobileMenuBg } from "./mobileMenuBg.png";
 
 

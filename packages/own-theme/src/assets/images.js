@@ -27,6 +27,7 @@ import {
   bgClinical,
   menuIcon,
   cancelIcon,
+  mobileMenuBg,
 } from "./index";
 
 const Images = {
@@ -58,6 +59,7 @@ const Images = {
   bgClinical,
   menuIcon,
   cancelIcon,
+  mobileMenuBg,
 };
 
 export default Images;
