@@ -1,8 +1,18 @@
+import { useState } from "react";
+
 import { connect, styled } from "frontity";
+import Images from "../assets/images";
 import Link from "./link";
 import Logo from "./logo";
 
 function Nav({ state }) {
+  const [showMenu, setShowMenu] = useState(false);
+
+  function toggleMenu(value) {
+    setShowMenu(value);
+    console.log("I was clicked", showMenu);
+  }
+
   function displaynavLinks(name, link, visibility) {
     const isCurrentPage = state.router.link === link;
     return (
@@ -15,14 +25,31 @@ function Nav({ state }) {
   }
 
   return (
-    <NavContainer>
-      <Logo />
-      <span className="menu-links">
-        {state.theme.menu.map(([name, link]) => {
-          return displaynavLinks(name, link);
-        })}
-      </span>
-    </NavContainer>
+    <>
+      {showMenu && (
+        <MobileMenu>
+          <img onClick={() => toggleMenu(false)} src={Images.cancelIcon} />
+          <span className="mobile-links">
+            {state.theme.menu.map(([name, link]) => {
+              return displaynavLinks(name, link);
+            })}
+          </span>
+        </MobileMenu>
+      )}
+      <NavContainer>
+        <Logo />
+        <span className="menu-links">
+          {state.theme.menu.map(([name, link]) => {
+            return displaynavLinks(name, link);
+          })}
+        </span>
+        <img
+          onClick={() => toggleMenu(true)}
+          className="mobile-menu"
+          src={Images.menuIcon}
+        />
+      </NavContainer>
+    </>
   );
 }
 
@@ -34,6 +61,10 @@ const NavContainer = styled.nav`
   justify-content: space-between; 
   padding:0px 100px;
   border-top: 1px solid black;
+
+  & .mobile-menu{
+    display:none;
+  }
 
   & .nav-item {
     margin: 0 24px,
@@ -82,7 +113,7 @@ const NavContainer = styled.nav`
     margin: 0px 10px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     padding:0px 10px;
 
     &  a{
@@ -97,6 +128,49 @@ const NavContainer = styled.nav`
     }
      & span.menu-links > div {
       margin: 0px 20px;
+    }
+  }
+
+   @media (max-width: 500px) {
+   
+     & span.menu-links {
+      display:none;
+    }
+
+    & img.mobile-menu {
+      display:flex;
+    }
+  }
+`;
+
+const MobileMenu = styled.div`
+  display: none;
+
+  @media (max-width: 500px) {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 100vh;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+
+    & img {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+
+    & span.mobile-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 50%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+      font-family: "Poppins", sans-serif;
     }
   }
 `;
