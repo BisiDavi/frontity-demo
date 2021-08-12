@@ -4,7 +4,7 @@ import Nav from "./nav";
 
 function Header() {
   return (
-    <Container>
+    <Container id="header">
       <SocialIcons />
       <Nav />
     </Container>

@@ -10,7 +10,7 @@ function ProceduresSection1({ state }) {
     <Container>
       <div className="title">
         <hr />
-        <h1>PROCEDURES</h1>
+        <h4>PROCEDURES</h4>
       </div>
       <div className="row first">
         <div className="icons">
@@ -112,8 +112,15 @@ const Container = styled.section`
   }
 
   & .title hr {
-    width: 30%;
+    width: 22%;
     position: absolute;
     left: 0;
+  }
+
+  & .title > h4 {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    margin-left: 200px;
   }
 `;

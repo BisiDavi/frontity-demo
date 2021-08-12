@@ -26,16 +26,16 @@ const Container = styled.section`
 
   & h1 {
     color: white;
-    font-size: 40px;
+    font-size: 70px;
     font-weight: 500;
     text-align: center;
   }
 
   & p {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     margin-top: 50px;
-    font-weight: bold;
-    letter-spacing: 4px;
+    font-weight: normal;
+    letter-spacing: 6px;
   }
 `;

@@ -34,11 +34,6 @@ const settings = {
             { name: "CLINICAL TRIALS", link: "/category/clinical-trials" },
             { name: "PROCEDURES", link: "/category/procedures" },
             { name: "CONTACT-LENS", link: "/category/contact-lens" },
-            { name: "PROVIDER PORTAL", link: "/category/provider-portal" },
-            {
-              name: "SCHEDULE CONSULTATION",
-              link: "/category/schedule-consultation",
-            },
             { name: "BLOG", link: "/category/blog" },
           ],
         },

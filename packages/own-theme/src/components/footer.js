@@ -12,16 +12,6 @@ import Link from "./link";
 function Footer({ state, bg = colors.gray }) {
   return (
     <Container style={{ backgroundColor: bg }}>
-      <TopSection>
-        <span>
-          <h5>Help</h5>
-          <img src={helpIcon} alt="help" />
-        </span>
-        <span>
-          <h5>Up To Top</h5>
-          <img src={upArrowIcon} alt="go up" />
-        </span>
-      </TopSection>
       <MainSection>
         <Logo />
         <FooterGroup>
@@ -65,22 +55,6 @@ const Container = styled.footer`
 
   & hr {
     margin: 0px;
-  }
-`;
-
-const TopSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-  width: 100%;
-  & span {
-    display: flex;
-    align-items: center;
-    margin: 0px 70px;
-  }
-  & span > h5 {
-    margin: 20px;
   }
 `;
 

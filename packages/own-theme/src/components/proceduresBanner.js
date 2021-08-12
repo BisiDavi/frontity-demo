@@ -1,6 +1,5 @@
 import { styled } from "frontity";
 import Images from "../assets/images";
-import Link from "./link";
 
 export default function ProceduresBanner() {
   return (
@@ -11,10 +10,6 @@ export default function ProceduresBanner() {
         </h1>
         <h5>LASIK & CATARACT SURGEONS</h5>
       </span>
-      <Link link="/category/schedule-consultation/">
-        <button>Schedule a consultation</button>
-      </Link>
-      <img src={Images.scroll} alt="scroll" />
     </Container>
   );
 }
@@ -27,7 +22,7 @@ const Container = styled.section`
   height: 900px;
   background-size: cover;
   background-position: center;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
 
   & h1 {

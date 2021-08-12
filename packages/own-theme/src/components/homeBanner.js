@@ -1,8 +1,6 @@
 import { styled } from "frontity";
 
-import Link from "./link";
 import bannerImg from "../assets/homeBanner.png";
-import scroll from "../assets/scroll.png";
 
 function HomeBanner() {
   return (
@@ -14,15 +12,6 @@ function HomeBanner() {
           </h1>
           <p>LASIK & CATARACT SURGEONS</p>
         </span>
-        <ButtonGroup>
-          <Link link="/category/schedule-consultation">
-            <button>Schedule a consultation</button>
-          </Link>
-          <button>Take a self test</button>
-        </ButtonGroup>
-        <Scroll>
-          <img src={scroll} alt="go down" />
-        </Scroll>
       </Bannercontent>
     </Banner>
   );
@@ -43,7 +32,7 @@ const Banner = styled.div`
 const Bannercontent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 600px;
 
