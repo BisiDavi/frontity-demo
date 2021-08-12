@@ -8,8 +8,6 @@ export default function ClinicalBanner() {
         CLINICAL <b>TRIALS</b>
       </h1>
       <p>Ophthalmology Clinical Trials & Eye Research in Fargo</p>
-
-      {/* <button>Contact Us</button> */}
     </Container>
   );
 }
@@ -46,5 +44,31 @@ const Container = styled.section`
     font-size: 60px;
     font-weight: normal;
     margin: 10px auto;
+  }
+
+  @media (max-width: 1000px) {
+    height: 500px;
+
+    & h1 {
+      font-size: 45px;
+    }
+
+    & p {
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 5px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    & h1 {
+      font-size: 30px;
+    }
   }
 `;

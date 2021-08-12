@@ -14,8 +14,10 @@ export default function ClinicalSection1() {
         <hr />
         <h4>EXPERT SURGEONS & STAFF</h4>
       </div>
-      <InnerContainer>
-        <TitleCard content={titleCardContent} />
+      <div className="inner-container">
+        <span className="card">
+          <TitleCard content={titleCardContent} />
+        </span>
         <div className="text">
           <div className="icon-group">
             <div className="icon">
@@ -45,7 +47,7 @@ export default function ClinicalSection1() {
             <a href="tel:7013643865">701.364.3865</a>{" "}
           </li>
         </div>
-      </InnerContainer>
+      </div>
     </Container>
   );
 }
@@ -74,14 +76,12 @@ const Container = styled.section`
     left: 0;
     width: 30%;
   }
-`;
-
-const InnerContainer = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 80px auto;
-
+  & .inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+  }
   & .text {
     display: flex;
     flex-direction: column;
@@ -139,5 +139,51 @@ const InnerContainer = styled.section`
     position: relative;
     margin-left: 15px;
     z-index: 2;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 10px;
+
+    & .card {
+      margin: 0px;
+    }
+
+    & .card div {
+      margin: 0px;
+      padding: 20px;
+    }
+
+    & .title > h4 {
+      margin-left: 20px;
+      margin-top: 100px;
+      letter-spacing: 5px;
+      margin-bottom: 0px;
+    }
+
+    & .title > hr {
+      top: 80px;
+      width: 50%;
+    }
+
+    & .inner-container {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 10px;
+    height: unset;
+
+    & .inner-container {
+      flex-direction: column;
+    }
+
+    & .text {
+      width: 80%;
+    }
+
+    & .inner-container {
+      margin-top: 20px;
+    }
   }
 `;

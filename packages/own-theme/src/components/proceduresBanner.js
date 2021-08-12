@@ -51,4 +51,14 @@ const Container = styled.section`
   @media (max-width: 1000px) {
     height: 500px;
   }
+  
+  @media (max-width: 500px) {
+    & h5 {
+      font-size: 15px;
+    }
+
+    & h1 {
+      font-size: 30px;
+    }
+  }
 `;

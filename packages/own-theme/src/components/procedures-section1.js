@@ -137,7 +137,7 @@ const Container = styled.section`
       margin-left: 80px;
     }
 
-    && .row.first > img.main-img {
+    & .row.first > img.main-img {
       order: 2;
       height: 50%;
       width: 50%;
@@ -155,6 +155,41 @@ const Container = styled.section`
 
     & .title hr {
       width: 30%;
+    }
+
+    & .content > .row {
+      padding: 30px;
+    }
+    & .row > .inner-row > span p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & .row.first > img.main-img {
+      height: 100%;
+      width: 100%;
+    }
+    & .row > .inner-row > span {
+      width: 100%;
+    }
+
+    & .inner-row > div {
+      width: 70%;
+      height: 50%;
+    }
+
+    & .inner-row,
+    & .row.first {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+
+    & .row.first > img.main-img {
+      height: 100%;
+      width: 100%;
     }
   }
 `;
