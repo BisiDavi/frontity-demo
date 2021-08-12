@@ -1,8 +1,13 @@
 import { styled } from "frontity";
 import Images from "../assets/images";
 import colors from "../styles/colors";
+import TitleCard from "./titleCard";
 
 export default function ClinicalSection1() {
+  const titleCardContent = {
+    title: "MELANIE RINKENBERGER",
+    role: "STUDY COORDINATOR",
+  };
   return (
     <Container>
       <div className="title">
@@ -10,11 +15,7 @@ export default function ClinicalSection1() {
         <h4>EXPERT SURGEONS & STAFF</h4>
       </div>
       <InnerContainer>
-        <div className="card">
-          <h4>MELANIE RINKENBERGER</h4>
-          <hr />
-          <p>STUDY COORDINATOR</p>
-        </div>
+        <TitleCard content={titleCardContent} />
         <div className="text">
           <div className="icon-group">
             <div className="icon">
@@ -80,33 +81,6 @@ const InnerContainer = styled.section`
   align-items: center;
   justify-content: center;
   margin: 80px auto;
-
-  & .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 250px;
-    background-color: ${colors.glassy};
-    padding: 40px;
-    border-radius: 20px;
-    margin: 0px 40px;
-  }
-  & .card > hr {
-    width: 100%;
-    border: 1px solid #565151;
-    font-weight: 100;
-    font-size: 10px;
-  }
-
-  & .card > h4 {
-    font-size: 20px;
-  }
-
-  & .card > p {
-    letter-spacing: 2px;
-    font-size: 15px;
-  }
 
   & .text {
     display: flex;

@@ -25,4 +25,5 @@ const Container = styled.header`
   top: 0px;
   box-shadow: -20px 0px 1px 1px #adadb7;
   z-index: 100;
+  margin-bottom: 0px;
 `;

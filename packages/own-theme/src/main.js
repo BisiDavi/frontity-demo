@@ -67,4 +67,7 @@ const globalStyles = css`
     color: inherit;
     text-decoration: none;
   }
+  button {
+    cursor: pointer;
+  }
 `;
