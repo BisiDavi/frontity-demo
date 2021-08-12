@@ -1,10 +1,11 @@
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 import Images from "../assets/images";
 import colors from "../styles/colors";
 import TitleCard from "./titleCard";
+import Link from "./link";
 import proceduresContent from "../json/procedures.json";
 
-export default function ProceduresSection1() {
+function ProceduresSection1({ state }) {
   return (
     <Container>
       <div className="title">
@@ -35,11 +36,12 @@ export default function ProceduresSection1() {
             </div>
           ))}
         </div>
-        <div className="button">Schedule a consultation</div>
       </div>
     </Container>
   );
 }
+
+export default connect(ProceduresSection1);
 
 const Container = styled.section`
   display: flex;

@@ -9,7 +9,7 @@ export default function ClinicalBanner() {
       </h1>
       <p>Ophthalmology Clinical Trials & Eye Research in Fargo</p>
 
-      <button>Contact Us</button>
+      {/* <button>Contact Us</button> */}
     </Container>
   );
 }
