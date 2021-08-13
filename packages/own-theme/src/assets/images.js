@@ -28,14 +28,6 @@ import {
   menuIcon,
   cancelIcon,
   mobileMenuBg,
-  blogImg1,
-  blogImg2,
-  blog1,
-  blog2,
-  blog3,
-  blog4,
-  blog5,
-  blog6,
 } from "./index";
 
 const Images = {
@@ -68,14 +60,6 @@ const Images = {
   menuIcon,
   cancelIcon,
   mobileMenuBg,
-  blogImg1,
-  blogImg2,
-  blog1,
-  blog2,
-  blog3,
-  blog4,
-  blog5,
-  blog6,
 };
 
 export default Images;
