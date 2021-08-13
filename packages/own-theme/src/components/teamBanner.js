@@ -18,7 +18,6 @@ export default function TeamBanner() {
           <img src={Images.team2} alt="our-team" />
         </Column>
       </div>
-      <img src={Images.scrollBlack} className="scroll" alt="scroll" />
     </Banner>
   );
 }

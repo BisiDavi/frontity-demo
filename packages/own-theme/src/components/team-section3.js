@@ -90,7 +90,6 @@ function TeamSection3({ state, actions, libraries }) {
           </div>
         </div>
       </div>
-      <img src="/bluewaves.png" alt="waves" className="bluewaves" />
       <img src={Images.dots} alt="dots" className="dots" />
     </Section>
   );

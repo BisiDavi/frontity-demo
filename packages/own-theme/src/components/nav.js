@@ -113,6 +113,10 @@ const NavContainer = styled.nav`
     margin: 0px 10px;
   }
 
+  @media (max-width:1300px){
+    padding:0px 50px;
+  }
+
   @media (max-width: 1000px) {
     padding:0px 10px;
 

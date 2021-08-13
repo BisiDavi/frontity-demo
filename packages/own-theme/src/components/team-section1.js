@@ -5,7 +5,7 @@ import colors from "../styles/colors";
 export default function TeamSection1() {
   return (
     <Section>
-      <img src={Images.staff} alt="staff image" />
+      <img className="staff" src={Images.staff} alt="staff image" />
       <div className="text-content">
         <hr />
         <h3>
@@ -14,7 +14,9 @@ export default function TeamSection1() {
         </h3>
         <p>
           With
-          <span><a>25 YEARS</a></span>
+          <span>
+            <a>25 YEARS</a>
+          </span>
           in practice we have a wealth of <b>experience</b>
         </p>
       </div>
@@ -95,5 +97,21 @@ const Section = styled.section`
     margin: 0px 5px;
     position: relative;
     text-decoration: none;
+  }
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    padding: 50px;
+    & .staff {
+      height: 100%;
+      width: 100%;
+    }
+    & .text-content {
+      width: 100%;
+    }
+
+    & .text-content > h3 {
+      font-size: 2px;
+    }
   }
 `;
