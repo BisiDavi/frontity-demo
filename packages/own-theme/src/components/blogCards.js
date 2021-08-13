@@ -145,6 +145,15 @@ const BigCard = styled.div`
       padding: 30px;
     }
   }
+
+  @media (max-width: 500px) {
+    & .card > div > .text,
+    & .card > div.inverted > .text {
+      width: 100%;
+      margin: auto;
+      padding: 0;
+    }
+  }
 `;
 
 export default function SmallBlogCards({ content }) {

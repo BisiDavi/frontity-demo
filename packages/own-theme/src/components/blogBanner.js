@@ -35,4 +35,18 @@ const Container = styled.section`
     letter-spacing: 4px;
     margin: 20px auto;
   }
+
+  @media (max-width: 500px) {
+    height: 500px;
+
+    & p {
+      font-size: 20px;
+      margin: 0px;
+    }
+
+    & h1 {
+      font-size: 40px;
+      letter-spacing: 10px;
+    }
+  }
 `;
