@@ -28,5 +28,11 @@ export { default as bgClinical } from "./bgclinical.png";
 export { default as menuIcon } from "./menuIcon.png";
 export { default as cancelIcon } from "./cancelIcon.png";
 export { default as mobileMenuBg } from "./mobileMenuBg.png";
-
-
+export { default as blogImg1 } from "./blogImage1.png";
+export { default as blogImg2 } from "./blogImage2.png";
+export { default as blog1 } from "./blog1.png";
+export { default as blog2 } from "./blog2.png";
+export { default as blog3 } from "./blog3.png";
+export { default as blog4 } from "./blog4.png";
+export { default as blog5 } from "./blog5.png";
+export { default as blog6 } from "./blog6.png";
