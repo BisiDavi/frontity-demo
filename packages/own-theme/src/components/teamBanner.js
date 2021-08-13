@@ -5,18 +5,18 @@ export default function TeamBanner() {
   return (
     <Banner className="banner">
       <div className="row">
-        <Column className="column1">
+        <div className="column">
           <div className="text">
             <hr />
             <h1>
               OUR <b>TEAM</b>
             </h1>
           </div>
-          <img src={Images.team1} alt="team" />
-        </Column>
-        <Column className="column2">
-          <img src={Images.team2} alt="our-team" />
-        </Column>
+          <img className="img1" src={Images.team1} alt="team" />
+        </div>
+        <div className="column">
+          <img className="img2" src={Images.team2} alt="our-team" />
+        </div>
       </div>
     </Banner>
   );
@@ -39,13 +39,11 @@ const Banner = styled.section`
     justify-content: center;
     position: relative;
   }
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-
+  & .column {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
   & .text {
     font-family: "Poppins", sans-serif;
   }
@@ -68,11 +66,26 @@ const Column = styled.div`
     font-weight: bold;
   }
 
-  .column1 img {
+  & img.img1 {
     height: 75vh;
   }
 
-  .column2 img {
+  & img.img2 {
     height: 100vh;
+  }
+
+  @media (max-width: 1280px) {
+    height: unset;
+    padding: 30px 0px;
+
+    & img.img1,
+    & img.img2 {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .text h1 {
+      font-size: 40px;
+    }
   }
 `;

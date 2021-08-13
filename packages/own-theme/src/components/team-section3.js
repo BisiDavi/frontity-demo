@@ -128,4 +128,11 @@ const Section = styled.section`
     font-size: 20px;
     font-family: "Poppins";
   }
+
+  @media (max-width: 1280px) {
+    & .author > img {
+      height: 100%;
+      width: 100%;
+    }
+  }
 `;

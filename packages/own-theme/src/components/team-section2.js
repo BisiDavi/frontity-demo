@@ -94,4 +94,13 @@ const Section = styled.section`
     position: absolute;
     left: 0px;
   }
+
+  @media (max-width: 1280px) {
+    & .card > img {
+      height: 50%;
+      width: 50%;
+      margin: auto;
+      display: flex;
+    }
+  }
 `;

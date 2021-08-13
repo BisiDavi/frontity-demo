@@ -108,10 +108,12 @@ const Section = styled.section`
     }
     & .text-content {
       width: 100%;
+      margin-top: 10px;
     }
 
     & .text-content > h3 {
-      font-size: 2px;
+      font-size: 25px;
+      margin-top: 15px;
     }
   }
 `;
