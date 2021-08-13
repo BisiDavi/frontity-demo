@@ -15,7 +15,7 @@ function TeamSection3({ state, actions, libraries }) {
         <hr />
         <h3>BIO STORY</h3>
       </div>
-      <img src={Images.dots} alt="dots" className="dots" />
+      <img src={Images.dots} alt="dots" className="dots first" />
       <div className="stories">
         <div className="story">
           <div className="author">
@@ -30,11 +30,7 @@ function TeamSection3({ state, actions, libraries }) {
             eye sugeries and over 10,000 Lasik and PRK laser procedures. He is
             also a cornea transplant surgeon, giving him valuable experience in
             all aspects of cornea surgery. Dr. Bagan has had refractive surgery
-            himself. This unique perspective and his careful personal approach
-            will provide you with an excellent refractive surgery experience. He
-            goes overseas to perform volunteer surgery, and has performed and
-            taught eye surgery in the Philippines, Nigeria, India, Peru,
-            Nicaragua, Ukraine, Romania and other countries.
+            himself.
           </div>
         </div>
       </div>
@@ -53,12 +49,7 @@ function TeamSection3({ state, actions, libraries }) {
             LASIK in 1998 and implanting multifocal implants in 1999. Dr.
             Strinden’s practice emphasis is refractive surgery and cataract
             surgery but he also offers a range of services related to general
-            ophthalmology. He is an associate clinical professor at the
-            University of North Dakota School of Medicine and does a yearly
-            medical mission trip to Honduras. He and his wife, Michelle, have
-            four children and reside in Fargo. He is active in his church and
-            enjoys outdoor activities with his kids such as hunting and fishing.
-            He also serves on the FCA hockey National Board.
+            ophthalmology.
           </div>
         </div>
       </div>
@@ -80,17 +71,11 @@ function TeamSection3({ state, actions, libraries }) {
             City Veterans Affairs Medical Center, specializing in ocular disease
             and low vision. Her professional areas of interest include primary
             eye care, ocular disease prevention and treatment, specialty contact
-            lenses, and surgical co-management. She is a current member of the
-            American Optometric Association and the North Dakota Optometric
-            Association. She has served as a member of the Heartland Healthcare
-            Network Ancillary Board as well as been a member of the United Way’s
-            35 Under 35 Women’s Leadership program. She and her husband, Chaz,
-            live in Fargo with their two daughters. She enjoys running, golfing,
-            and traveling, in her free time.
+            lenses, and surgical co-management.
           </div>
         </div>
       </div>
-      <img src={Images.dots} alt="dots" className="dots" />
+      <img src={Images.dots} alt="dots" className="dots second" />
     </Section>
   );
 }
@@ -130,9 +115,65 @@ const Section = styled.section`
   }
 
   @media (max-width: 1280px) {
+    position: relative;
+
     & .author > img {
       height: 100%;
       width: 100%;
+    }
+
+    & img.dots.first {
+      position: absolute;
+      z-index: 1;
+      height: 200px;
+    }
+
+    & .stories {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    & .story {
+      align-items: center;
+    }
+
+    & .text {
+      width: 100%;
+      line-height: 20px;
+      font-size: 14px;
+    }
+
+    img.dots.second {
+      position: absolute;
+      right: 10px;
+      bottom: 0px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & .title h3 {
+      text-align: right;
+      margin-right: 10px;
+      letter-spacing: 2px;
+      margin-top: 0;
+    }
+    & .text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    & .author > img {
+      height: 50%;
+      width: 50%;
+      margin: auto;
+    }
+
+    & .story {
+      margin: 0px;
+      flex-direction: column;
+      text-align: center;
     }
   }
 `;

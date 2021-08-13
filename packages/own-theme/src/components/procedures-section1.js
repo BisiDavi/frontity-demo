@@ -167,6 +167,8 @@ const Container = styled.section`
   }
 
   @media (max-width: 500px) {
+    padding-top: 20px;
+
     & .row.first > img.main-img {
       height: 100%;
       width: 100%;

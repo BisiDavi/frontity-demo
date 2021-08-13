@@ -102,5 +102,32 @@ const Section = styled.section`
       margin: auto;
       display: flex;
     }
+
+    .title > h3 {
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+
+    .contentbg {
+      top: 50px;
+    }
+
+    & .card > h3 {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & .card-group {
+      flex-direction: column;
+    }
+
+    & .card {
+      margin: 10px 20px;
+    }
+
+    & .contentbg {
+      height: 100%;
+    }
   }
 `;

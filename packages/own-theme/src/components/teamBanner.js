@@ -88,4 +88,16 @@ const Banner = styled.section`
       font-size: 40px;
     }
   }
+
+  @media (max-width: 500px) {
+    & .text h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    & .column {
+      margin: 10px;
+      padding: 0px;
+    }
+  }
 `;

@@ -116,4 +116,29 @@ const Section = styled.section`
       margin-top: 15px;
     }
   }
+
+  @media (max-width: 500px) {
+    padding: 20px;
+    height: unset;
+
+    & .staff {
+      height: 50%;
+      width: 100%;
+    }
+
+    & .text-content > h3 {
+      width: 100%;
+      font-size: 20px;
+    }
+
+    & .text-content p {
+      font-size: 15px;
+    }
+
+    & img.dots {
+      height: 100px;
+      bottom: -30px;
+      right: 0px;
+    }
+  }
 `;
