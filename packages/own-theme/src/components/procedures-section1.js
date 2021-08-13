@@ -2,10 +2,14 @@ import { styled, connect } from "frontity";
 import Images from "../assets/images";
 import colors from "../styles/colors";
 import TitleCard from "./titleCard";
-import Link from "./link";
-import proceduresContent from "../json/procedures.json";
 
-function ProceduresSection1({ state }) {
+function ProceduresSection1({ state, libraries }) {
+  const Html2React = libraries.html2react.Component;
+
+  const proceduresPost = Object.values(state.source.post).filter(
+    (f) => f.categories[0] === 19433
+  );
+  console.log("proceduresPost ", proceduresPost);
   return (
     <Container>
       <div className="title">
@@ -27,11 +31,11 @@ function ProceduresSection1({ state }) {
       </div>
       <div className="content">
         <div className="row">
-          {proceduresContent.map((content, index) => (
+          {proceduresPost.map((data, index) => (
             <div className="inner-row" key={index}>
-              <TitleCard content={content} />
+              <TitleCard content={data} />
               <span>
-                <p>{content.text}</p>
+                <Html2React html={data.content.rendered} />
               </span>
             </div>
           ))}
@@ -81,8 +85,9 @@ const Container = styled.section`
 
   & .inner-row {
     justify-content: space-around;
-    margin: 20px auto;
+    margin: 20px 0;
     display: flex;
+    width: 100%;
     align-items: center;
   }
 

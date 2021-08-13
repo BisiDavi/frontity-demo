@@ -1,15 +1,19 @@
 import colors from "../styles/colors";
-import { styled } from "frontity";
+import { styled, connect } from "frontity";
 
-export default function TitleCard({ content }) {
+function TitleCard({ content, libraries }) {
+  const Html2React = libraries.html2react.Component;
+
   return (
     <Card>
-      <h4>{content.title}</h4>
+      <h4 dangerouslySetInnerHTML={{ __html: content.title?.rendered }} />
       <hr />
-      <p>{content.role}</p>
+      <Html2React html={content.excerpt?.rendered} />
     </Card>
   );
 }
+
+export default connect(TitleCard);
 
 const Card = styled.div`
   display: flex;

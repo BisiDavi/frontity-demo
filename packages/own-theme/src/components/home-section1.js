@@ -1,8 +1,13 @@
-import { styled } from "frontity";
+import { connect, styled } from "frontity";
 import travelling from "../assets/travelling.png";
 import colors from "../styles/colors";
 
-function HomeSection1() {
+function HomeSection1({ state, libraries }) {
+  const Html2React = libraries.html2react.Component;
+  const post = Object.values(state.source?.post);
+  
+  console.log("post", post);
+
   return (
     <Container className="container">
       <div className="text-content">
@@ -25,7 +30,7 @@ function HomeSection1() {
   );
 }
 
-export default HomeSection1;
+export default connect(HomeSection1);
 
 const Container = styled.section`
   display: flex;

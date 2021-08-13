@@ -2,7 +2,6 @@ import BigBlogCard from "./bigBlogCard";
 import SmallBlogCards from "./smallBlogCard";
 import Loading from "./loading";
 
-import blogData from "../json/blog.json";
 import { connect, styled } from "frontity";
 
 function BlogSection({ state }) {
@@ -12,7 +11,7 @@ function BlogSection({ state }) {
   const headlinePost = blogPost.filter((post) => post.tags[0] === 24931);
   const otherpost = blogPost.filter((post) => post.tags[0] !== 24931);
 
-  return data.isReady && headlinePost.length !== 0 ? (
+  return data.isReady ? (
     <Container>
       <BigBlogCard content={headlinePost} />
       <SmallBlogCards content={otherpost} />

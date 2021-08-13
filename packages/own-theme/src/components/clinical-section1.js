@@ -1,9 +1,9 @@
-import { styled } from "frontity";
+import { connect, styled } from "frontity";
 import Images from "../assets/images";
 import colors from "../styles/colors";
 import TitleCard from "./titleCard";
 
-export default function ClinicalSection1() {
+function ClinicalSection1() {
   const titleCardContent = {
     title: "MELANIE RINKENBERGER",
     role: "STUDY COORDINATOR",
@@ -51,6 +51,8 @@ export default function ClinicalSection1() {
     </Container>
   );
 }
+
+export default connect(ClinicalSection1);
 
 const Container = styled.section`
   display: flex;
