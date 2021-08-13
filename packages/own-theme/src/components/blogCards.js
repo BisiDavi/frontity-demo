@@ -116,6 +116,35 @@ const BigCard = styled.div`
     line-height: 20px;
     font-size: 25px;
   }
+
+  @media (max-width: 800px) {
+    & .card > div > .text {
+      width: 80%;
+    }
+
+    & .card > div {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    & .card > div > img {
+      height: 100%;
+      width: 100%;
+    }
+
+    & .inverted > .text {
+      order: 2;
+    }
+
+    & .inverted > img {
+      order: 1;
+    }
+
+    & .card > div.inverted > .text {
+      width: 100%;
+      padding: 30px;
+    }
+  }
 `;
 
 export default function SmallBlogCards({ content }) {
@@ -137,7 +166,7 @@ export default function SmallBlogCards({ content }) {
 const SmallCard = styled.div`
   display: flex;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
 
   & .blog-card {
@@ -161,5 +190,31 @@ const SmallCard = styled.div`
 
   & .blog-card {
     margin: 10px;
+  }
+
+  @media (max-width: 1280px) {
+    grid-gap: 10px;
+
+    & .blog-card > img {
+      width: 100%;
+      height: 300px;
+    }
+    & .card > div.inverted > .text {
+      padding-left: 60px;
+    }
+
+    & .card > img {
+      height: 450px;
+    }
+
+    & .text-group > p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    & .text-group > h1 {
+      font-size: 20px;
+      margin: 0px;
+    }
   }
 `;

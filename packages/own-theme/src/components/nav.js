@@ -131,11 +131,11 @@ const NavContainer = styled.nav`
       font-size: 14px;
     }
      & span.menu-links > div {
-      margin: 0px 20px;
+      margin: 0px 10px;
     }
   }
 
-   @media (max-width: 500px) {
+   @media (max-width: 700px) {
    
      & span.menu-links {
       display:none;
@@ -150,7 +150,7 @@ const NavContainer = styled.nav`
 const MobileMenu = styled.div`
   display: none;
 
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     display: flex;
     position: absolute;
     align-items: center;

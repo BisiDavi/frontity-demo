@@ -15,4 +15,8 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   padding: 100px;
+
+  @media (max-width: 1440px) {
+    padding: 30px;
+  }
 `;

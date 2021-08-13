@@ -148,7 +148,7 @@ const Container = styled.footer`
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     & .footer-group {
       flex-direction: column;
     }
