@@ -64,9 +64,7 @@ function HomeSection4({ libraries }) {
                 src={content.jetpack_featured_media_url}
                 alt="testimonial1"
               />
-              <p>
-                <Html2React html={content.content.rendered} />
-              </p>
+              <Html2React html={content.content.rendered} />
             </div>
           ))}
         </div>

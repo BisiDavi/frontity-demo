@@ -35,6 +35,7 @@ const Card = styled.div`
 
   & h4 {
     font-size: 20px;
+    text-transform: uppercase;
   }
 
   & p {
