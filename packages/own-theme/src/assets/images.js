@@ -1,6 +1,5 @@
 import {
   proceduresBannerImg,
-  scrollIcon,
   cataractIcon,
   eyeIcon,
   cosmeticsIcon,
@@ -12,7 +11,6 @@ import {
   telephoneIcon,
   contactLens,
   roundLogo,
-  drug,
   blogBanner,
   team1,
   team2,
@@ -32,7 +30,6 @@ import {
 
 const Images = {
   proceduresBanner: proceduresBannerImg,
-  scroll: scrollIcon,
   cataractIcon,
   eyeIcon,
   cosmeticsIcon,
@@ -44,7 +41,6 @@ const Images = {
   telephoneIcon,
   contactLens,
   roundLogo,
-  drug,
   blogBanner,
   team1,
   team2,

@@ -9,7 +9,6 @@ function ProceduresSection1({ state, libraries }) {
   const proceduresPost = Object.values(state.source.post).filter(
     (f) => f.categories[0] === 19433
   );
-  console.log("proceduresPost ", proceduresPost);
   return (
     <Container>
       <div className="title">

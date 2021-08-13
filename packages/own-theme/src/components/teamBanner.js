@@ -67,11 +67,11 @@ const Banner = styled.section`
   }
 
   & img.img1 {
-    height: 75vh;
+    height: 100%;
   }
 
   & img.img2 {
-    height: 100vh;
+    height: 100%;
   }
 
   @media (max-width: 1280px) {

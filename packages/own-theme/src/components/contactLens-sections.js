@@ -1,8 +1,14 @@
-import { styled } from "frontity";
-import Images from "../assets/images";
+import { connect, styled } from "frontity";
 import colors from "../styles/colors";
 
-export default function ContactLensSections() {
+function ContactLensSections({ state, libraries }) {
+  const Html2React = libraries.html2react.Component;
+
+  const post = Object.values(state.source.post).filter(
+    (f) => f.categories[0] === 63853
+  );
+  console.log("post ", post);
+
   return (
     <Container>
       <div className="title">
@@ -10,7 +16,9 @@ export default function ContactLensSections() {
         <h4>EXPERT SURGEONS & STAFF</h4>
       </div>
       <div className="inner-container">
-        <img src={Images.drug} alt="our logo" />
+        <FeaturedImage>
+          <img src={post[0].jetpack_featured_media_url} alt="our logo" />
+        </FeaturedImage>
         <div className="text">
           <div className="icon-group">
             <div className="icon">
@@ -26,16 +34,51 @@ export default function ContactLensSections() {
               <h5>PATIENT VOLUME</h5>
             </div>
           </div>
-          <p>
-            Our expert doctors and staff are dedicated to meeting your eye care
-            needs in the most convenient way possible. We are excited to allow
-            our patients to order contacts from the comfort of their own homes.
-          </p>
+          <Text>
+            <Html2React html={post[0].content.rendered} />
+          </Text>
         </div>
       </div>
     </Container>
   );
 }
+
+export default connect(ContactLensSections);
+
+const FeaturedImage = styled.div`
+  & img {
+    width: 600px;
+    height: 600px;
+    margin: 0px 40px;
+  }
+
+  @media (max-width: 500px) {
+    & img {
+      height: 70%;
+      width: 70%;
+    }
+  }
+`;
+
+const Text = styled.div`
+  p {
+    line-height: 35px;
+    font-size: 30px;
+  }
+  @media (max-width: 1000px) {
+    p {
+      line-height: 30px;
+      font-size: 25px;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      line-height: 25px;
+      padding: 10px;
+      font-size: 20px;
+    }
+  }
+`;
 
 const Container = styled.section`
   display: flex;
@@ -48,11 +91,6 @@ const Container = styled.section`
     flex-direction: column;
     margin: 0px 40px;
     width: 50%;
-  }
-
-  & .text p {
-    line-height: 35px;
-    font-size: 30px;
   }
 
   & .title {

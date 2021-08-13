@@ -1,8 +1,6 @@
 export { default as wavesImg } from "./waves.png";
 export { default as proceduresBannerImg } from "./proceduresBanner.png";
 export { default as proceduresImg1 } from "./procedureImg1.png";
-export { default as scrollIcon } from "./scroll.png";
-export { default as scrollBlack } from "./scrollblack.png";
 export { default as cataractIcon } from "./cataractIcon.png";
 export { default as eyeIcon } from "./eyeIcon.png";
 export { default as cosmeticsIcon } from "./cosmeticsIcon.png";
@@ -13,7 +11,6 @@ export { default as emailIcon } from "./mail.png";
 export { default as telephoneIcon } from "./telephone.png";
 export { default as contactLens } from "./contactLens.png";
 export { default as roundLogo } from "./logoRounded.png";
-export { default as drug } from "./drug.png";
 export { default as blogBanner } from "./blogBanner.png";
 export { default as staff } from "./staff.png";
 export { default as team1 } from "./team1.png";
