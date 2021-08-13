@@ -3,11 +3,13 @@ import Images from "../assets/images";
 import colors from "../styles/colors";
 import TitleCard from "./titleCard";
 
-function ClinicalSection1() {
-  const titleCardContent = {
-    title: "MELANIE RINKENBERGER",
-    role: "STUDY COORDINATOR",
-  };
+function ClinicalSection1({ state, libraries }) {
+  const Html2React = libraries.html2react.Component;
+
+  const post = Object.values(state.source.post).filter(
+    (f) => f.categories[0] === 84539
+  );
+
   return (
     <Container>
       <div className="title">
@@ -15,9 +17,9 @@ function ClinicalSection1() {
         <h4>EXPERT SURGEONS & STAFF</h4>
       </div>
       <div className="inner-container">
-        <span className="card">
-          <TitleCard content={titleCardContent} />
-        </span>
+        <Card>
+          <TitleCard content={post[0]} />
+        </Card>
         <div className="text">
           <div className="icon-group">
             <div className="icon">
@@ -33,11 +35,9 @@ function ClinicalSection1() {
               <h5>PATIENT VOLUME</h5>
             </div>
           </div>
-          <p>
-            Our expert surgeons and staff are committed to advancing the field
-            of eye care. Learn more about how we have taken a leadership role in
-            our community and the eyecare industry.
-          </p>
+          <Text>
+            <Html2React html={post[0].content.rendered} />
+          </Text>
           <li>
             <img src={Images.emailIcon} />{" "}
             <p>melanie@baganstrindenvision.com</p>{" "}
@@ -53,6 +53,32 @@ function ClinicalSection1() {
 }
 
 export default connect(ClinicalSection1);
+
+const Card = styled.div`
+  & div {
+    width: 100%;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 0px;
+    div {
+      margin: 0px;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 500px) {
+    & div {
+      height: 150px;
+    }
+  }
+`;
+
+const Text = styled.div`
+  p {
+    line-height: 26px;
+    font-size: 18px;
+  }
+`;
 
 const Container = styled.section`
   display: flex;
@@ -81,7 +107,7 @@ const Container = styled.section`
   & .inner-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 80px auto;
   }
   & .text {
@@ -89,11 +115,6 @@ const Container = styled.section`
     flex-direction: column;
     margin: 0px 40px;
     width: 30%;
-  }
-
-  & .text p {
-    line-height: 26px;
-    font-size: 18px;
   }
 
   & .text > li {

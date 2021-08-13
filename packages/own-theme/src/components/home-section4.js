@@ -1,65 +1,79 @@
+import { useState, useEffect } from "react";
 import { connect, styled } from "frontity";
 import quoteIcon from "../assets/quoteIcon.png";
 import testimonial0 from "../assets/testimonial0.png";
 import testimonial1 from "../assets/testimonial1.png";
 import testimonial2 from "../assets/testimonial2.png";
 import testimonial3 from "../assets/testimonial3.png";
+import Loading from "./loading";
 
-function HomeSection4({ state }) {
-  return (
+function HomeSection4({ libraries }) {
+  const Html2React = libraries.html2react.Component;
+
+  const [postData, setPostData] = useState(null);
+
+  async function fetchTestimonials() {
+    const data = await libraries.source.api.get({
+      endpoint: "posts",
+      params: { _embed: true, categories: "26382" },
+    });
+    const response = data.json();
+    response.then((result) => {
+      setPostData(result);
+    });
+  }
+
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
+
+  let mainTestimonial, otherTestimonials;
+  if (postData !== null && postData !== undefined) {
+    mainTestimonial = postData.filter((f) => f.tags[0] === 231502154);
+    otherTestimonials = postData.filter((f) => f.tags[0] !== 231502154);
+  }
+
+  console.log("mainTestimonial", mainTestimonial);
+  console.log("otherTestimonials", otherTestimonials);
+
+  return postData !== null && postData !== undefined ? (
     <Container>
       <h3>TESTIMONIALS</h3>
       <div className="inner-container">
         <div className="full-testimonial">
-          <img src={testimonial0} alt="testimonial0" />
-          <h3>Ann Tsvetaeva</h3>
+          <img
+            src={mainTestimonial[0]?.jetpack_featured_media_url}
+            alt="testimonial"
+          />
+          <h3
+            dangerouslySetInnerHTML={{
+              __html: mainTestimonial[0].title.rendered,
+            }}
+          />
           <div className="text">
             <img src={quoteIcon} alt="" />
             <article>
-              <p>
-                My dad had cataract surgery from Dr. Strinden last month and it
-                was so incredible. Dad doesn't normally handle surgery or
-                doctor's visits well but Dr. Strinden and his staff were able
-                make him feel comfortable and confident about the procedure.
-                They are truly gifted! We are so grateful for Dr. Tom and his
-                whole team.
-              </p>
+              <Html2React html={mainTestimonial[0].content.rendered} />
             </article>
           </div>
         </div>
         <div className="column">
-          <div className="testimonial-group">
-            <img src={testimonial1} alt="testimonial1" />
-            <p>
-              “Dr. Strinden performed my LASIK surgery last month and I'm loving
-              the results. I can't believe I didn't have it done sooner. Thank
-              you to Dr. Tom, Melanie and the staff for an all around awesome
-              experience!”
-            </p>
-          </div>
-          <div className="testimonial-group">
-            <img src={testimonial2} alt="testimonial2" />
-            <p>
-              “One eye 20/20 one eye to go:) in 2002 I had the lowest bidder
-              attempt LASIK on my eyes. It was a place in Hawaii, and they
-              messed up on both eyes unfortunately. Dr. Tom Strinden and his
-              crew did an outstanding job on my left eye with PRK, cant wait to
-              get the right eye done, its been un-correctable, and un-corrected
-              for 16 yrs.”
-            </p>
-          </div>
-          <div className="testimonial-group">
-            <img src={testimonial3} alt="testimonial3" />
-            <p>
-              “After almost 30 years in corrective eyewear, I took the leap to
-              get my vision corrected once and for all. No regrets! The entire
-              staff is welcoming, and makes you comfortable throughout the
-              entire process. Thank you a million times over!”
-            </p>
-          </div>
+          {otherTestimonials.map((content, index) => (
+            <div key={index} className="testimonial-group">
+              <img
+                src={content.jetpack_featured_media_url}
+                alt="testimonial1"
+              />
+              <p>
+                <Html2React html={content.content.rendered} />
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </Container>
+  ) : (
+    <Loading />
   );
 }
 

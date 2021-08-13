@@ -6,8 +6,6 @@ function HomeSection1({ state, libraries }) {
   const Html2React = libraries.html2react.Component;
   const post = Object.values(state.source?.post);
   
-  console.log("post", post);
-
   return (
     <Container className="container">
       <div className="text-content">

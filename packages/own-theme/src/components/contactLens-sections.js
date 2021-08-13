@@ -7,7 +7,6 @@ function ContactLensSections({ state, libraries }) {
   const post = Object.values(state.source.post).filter(
     (f) => f.categories[0] === 63853
   );
-  console.log("post ", post);
 
   return (
     <Container>

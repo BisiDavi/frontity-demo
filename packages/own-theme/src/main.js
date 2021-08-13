@@ -15,8 +15,6 @@ import Team from "./team";
 function Main({ state }) {
   const data = state.source.get(state.router.link);
 
-  console.log("data", data);
-
   return (
     <>
       <Title />
