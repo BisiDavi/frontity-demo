@@ -1,5 +1,6 @@
 import { styled } from "frontity";
 import Images from "../assets/images";
+import colors from "../styles/colors";
 
 function displayImage(image) {
   switch (image) {
@@ -62,6 +63,7 @@ const BigCard = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 
   & .card > div {
     display: flex;
@@ -122,7 +124,7 @@ export default function SmallBlogCards({ content }) {
       {content.map((data, index) => (
         <div className="blog-card" key={index}>
           <img src={displayImage(data.img)} alt={data.title} />
-          <div>
+          <div className="text-group">
             <h1>{data.title}</h1>
             <p>{data.text}</p>
           </div>
@@ -140,5 +142,24 @@ const SmallCard = styled.div`
 
   & .blog-card {
     flex-direction: column;
+  }
+
+  & .text-group {
+    background-color: ${colors.glassy};
+    padding: 30px;
+  }
+
+  & .text-group > p {
+    line-height: 25px;
+    font-size: 20px;
+  }
+
+  & .blog-card > img {
+    width: 100%;
+    height: 400px;
+  }
+
+  & .blog-card {
+    margin: 10px;
   }
 `;
