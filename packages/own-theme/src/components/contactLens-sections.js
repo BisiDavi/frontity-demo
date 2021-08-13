@@ -10,9 +10,7 @@ export default function ContactLensSections() {
         <h4>EXPERT SURGEONS & STAFF</h4>
       </div>
       <div className="inner-container">
-        <div className="featured-image">
-          <img src={Images.drug} alt="our logo" />
-        </div>
+        <img src={Images.drug} alt="our logo" />
         <div className="text">
           <div className="icon-group">
             <div className="icon">
@@ -49,12 +47,12 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     margin: 0px 40px;
-    width: 30%;
+    width: 50%;
   }
 
   & .text p {
-    line-height: 26px;
-    font-size: 18px;
+    line-height: 35px;
+    font-size: 30px;
   }
 
   & .title {
@@ -86,38 +84,116 @@ const Container = styled.section`
   }
 
   & .icon > span {
-    height: 60px;
-    width: 60px;
+    height: 200px;
+    width: 200px;
     background-color: ${colors.lightBlue};
     border-radius: 50%;
     position: absolute;
     z-index: 1;
   }
 
-  & .icon h4 {
+  & .icon > h4 {
     margin: 2px;
     position: relative;
     z-index: 2;
-    margin-left: 15px;
+    margin-left: 40px;
+    font-size: 40px;
+    margin-top: 30px;
+    line-height: 20px;
     color: ${colors.gold};
   }
 
-  & .icon h5 {
+  & .icon > h5 {
     margin: 2px;
     position: relative;
-    margin-left: 15px;
+    z-index: 2;
+    margin-left: 40px;
+    font-size: 25px;
+    margin-top: 15px;
+    line-height: 20px;
     z-index: 2;
   }
 
-  & .featured-image > img {
-    width: 500px;
+  & .icon-group {
+    margin: 50px 0px;
+  }
+
+  & img {
+    width: 600px;
+    height: 600px;
     margin: 0px 40px;
   }
 
   & .inner-container {
     display: flex;
     align-item: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 80px auto;
+  }
+
+  @media (max-width: 1000px) {
+    .inner-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .text {
+      width: 100%;
+    }
+
+    &.text > p {
+      line-height: 30px;
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 10px;
+
+    & .title > h4 {
+      font-size: 15px;
+      letter-spacing: 2px;
+      margin-left: 40px;
+    }
+
+    & .title > hr {
+      width: 70%;
+    }
+
+    & img {
+      height: 70%;
+      width: 70%;
+    }
+
+    & .inner-container {
+      margin-top: 40px;
+    }
+
+    & .icon > h4 {
+      font-size: 20px;
+      margin: 0px;
+      margin-left: 35px;
+      margin-bottom: 5px;
+    }
+
+    & .icon > span {
+      height: 100px;
+      width: 100px;
+    }
+    & .icon > h5 {
+      font-size: 15px;
+      margin: 0;
+      margin-left: 35px;
+    }
+
+    & .text > p {
+      line-height: 25px;
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    & .icon-group {
+      margin: 0px;
+    }
   }
 `;

@@ -4,12 +4,10 @@ import Images from "../assets/images";
 export default function ContactLensBanner() {
   return (
     <Container>
-      <div>
-        <h1>
-          CONTACT <b>LENSES</b>
-        </h1>
-        <p>Online Contact Lens Ordering in Fargo</p>
-      </div>
+      <h1>
+        CONTACT <b>LENSES</b>
+      </h1>
+      <p>Online Contact Lens Ordering in Fargo</p>
     </Container>
   );
 }
@@ -37,5 +35,30 @@ const Container = styled.section`
     margin-top: 50px;
     font-weight: normal;
     letter-spacing: 6px;
+  }
+
+  @media (max-width: 1000px) {
+    height: 600px;
+
+    & p {
+      font-size: 25px;
+      text-align: center;
+      margin: 20px 0px;
+    }
+
+    & h1 {
+      font-size: 40px;
+      margin: 10px 0px;
+      line-height: 30px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & p {
+      font-size: 18px;
+      text-align: center;
+      padding: 10px;
+      margin: 20px 0px;
+    }
   }
 `;

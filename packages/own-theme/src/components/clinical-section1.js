@@ -183,7 +183,22 @@ const Container = styled.section`
     }
 
     & .inner-container {
+      margin: 0px;
       margin-top: 20px;
+    }
+
+    & .card div {
+      height: 150px;
+    }
+
+    & .title > hr {
+      top: 40px;
+      width: 50%;
+    }
+
+    & .title > h4 {
+      margin-left: 20px;
+      margin-top: 50px;
     }
   }
 `;
