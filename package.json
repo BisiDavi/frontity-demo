@@ -24,7 +24,6 @@
     "@frontity/wp-source": "^1.11.5",
     "dayjs": "^1.10.6",
     "frontity": "^1.17.0",
-    "typewriter-effect": "^2.18.0",
-    "upwork-site": "file:packages/upwork-site"
+    "typewriter-effect": "^2.18.0"
   }
 }
