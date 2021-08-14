@@ -1,5 +1,4 @@
 import { styled } from "frontity";
-import Images from "../assets/images";
 
 export default function ProceduresBanner() {
   return (
@@ -15,7 +14,7 @@ export default function ProceduresBanner() {
 }
 
 const Container = styled.section`
-  background-image: url(${Images.proceduresBanner});
+  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/proceduresBanner_sqk20z.webp");
   display: flex;
   align-items: center;
   flex-direction: column;

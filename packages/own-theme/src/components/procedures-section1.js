@@ -23,7 +23,7 @@ function ProceduresSection1({ state, libraries }) {
           <img src={Images.cosmeticsIcon} alt="cosmetic" />
         </div>
         <img
-          src={Images.proceduresImg1}
+          src="https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/procedureImg1_bjhgds.webp"
           className="main-img"
           alt="couple smiling while taking a selfie"
         />

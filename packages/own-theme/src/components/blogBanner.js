@@ -1,5 +1,4 @@
 import { styled } from "frontity";
-import Images from "../assets/images";
 
 export default function BlogBanner() {
   return (
@@ -11,7 +10,7 @@ export default function BlogBanner() {
 }
 
 const Container = styled.section`
-  background-image: url(${Images.blogBanner});
+  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906060/blogBanner_zo2ulb.webp");
   height: 850px;
   background-position: center;
   background-size: cover;

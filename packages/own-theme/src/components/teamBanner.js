@@ -12,10 +12,18 @@ export default function TeamBanner() {
               OUR <b>TEAM</b>
             </h1>
           </div>
-          <img className="img1" src={Images.team1} alt="team" />
+          <img
+            className="img1"
+            src="https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/team1_yaf9jx.webp"
+            alt="team"
+          />
         </div>
         <div className="column">
-          <img className="img2" src={Images.team2} alt="our-team" />
+          <img
+            className="img2"
+            src="https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/team2_s52afd.webp"
+            alt="our-team"
+          />
         </div>
       </div>
     </Banner>

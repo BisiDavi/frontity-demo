@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { connect, styled } from "frontity";
 import quoteIcon from "../assets/quoteIcon.png";
-import testimonial0 from "../assets/testimonial0.png";
-import testimonial1 from "../assets/testimonial1.png";
-import testimonial2 from "../assets/testimonial2.png";
-import testimonial3 from "../assets/testimonial3.png";
 import Loading from "./loading";
 
 function HomeSection4({ libraries }) {

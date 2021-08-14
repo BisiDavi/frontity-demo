@@ -1,5 +1,4 @@
 import { styled } from "frontity";
-import Images from "../assets/images";
 
 export default function ClinicalBanner() {
   return (
@@ -16,7 +15,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${Images.clinicialImg});
+  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/clinical_l91sof.webp");
   background-size: cover;
   flex-direction: column;
   background-position: center;

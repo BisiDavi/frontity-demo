@@ -1,5 +1,4 @@
 import { styled } from "frontity";
-import bannerImg from "../assets/homeBanner.png";
 
 function HomeBanner() {
   return (
@@ -18,7 +17,7 @@ export default HomeBanner;
 
 const Banner = styled.div`
   display: flex;
-  background-image: url(${bannerImg});
+  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/homeBanner_rhta2e.webp");
   height: 800px;
   align-items: center;
   justify-content: center;

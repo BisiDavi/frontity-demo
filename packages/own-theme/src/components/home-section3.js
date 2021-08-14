@@ -1,7 +1,6 @@
 import { styled } from "frontity";
 import bg from "../assets/bg.png";
 import colors from "../styles/colors";
-import parents from "../assets/parents.png";
 
 export default function HomeSection3() {
   return (
@@ -13,7 +12,10 @@ export default function HomeSection3() {
       <h2>EXPERT SURGEONS</h2>
       <div className="inner-container">
         <div className="featured-image">
-          <img src={parents} alt="parents" />
+          <img
+            src="https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/parents_gyzx5t.webp"
+            alt="parents"
+          />
         </div>
         <div className="column">
           <div className="text-content">

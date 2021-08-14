@@ -1,11 +1,7 @@
 import { connect, styled } from "frontity";
-import travelling from "../assets/travelling.png";
 import colors from "../styles/colors";
 
-function HomeSection1({ state, libraries }) {
-  const Html2React = libraries.html2react.Component;
-  const post = Object.values(state.source?.post);
-  
+function HomeSection1() {
   return (
     <Container className="container">
       <div className="text-content">
@@ -23,7 +19,10 @@ function HomeSection1({ state, libraries }) {
           clearly.{" "}
         </p>
       </div>
-      <img src={travelling} alt="travelling friends" />
+      <img
+        src="https://res.cloudinary.com/verrb-inc/image/upload/v1628907765/travelling_aetc30.webp"
+        alt="travelling friends"
+      />
     </Container>
   );
 }
