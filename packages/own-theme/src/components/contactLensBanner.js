@@ -13,7 +13,7 @@ export default function ContactLensBanner() {
 }
 
 const Container = styled.section`
-  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/contactLens_slmbmk.webp);
+  background-image: url("https://res.cloudinary.com/verrb-inc/image/upload/v1628906059/contactLens_slmbmk.webp");
   height: 850px;
   background-position: center;
   background-size: cover;

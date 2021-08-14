@@ -1,19 +1,11 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 import waves from "../assets/waves.png";
 import consulting from "../assets/consulting.png";
 import sun from "../assets/sun.png";
 import vision from "../assets/vision.png";
 import colors from "../styles/colors";
 
-function HomeSection2({ state, actions, libraries }) {
-  const data = state.source.get(state.router.link);
-  const post = state.source[data.type][data.id];
-
-  const HTML2React = libraries.html2react.Component;
-
-  console.log("post", post);
-  console.log("data", data);
-
+export default function HomeSection2() {
   return (
     <Container>
       <h3>STEPS TO CLEAR VISION</h3>
@@ -50,8 +42,6 @@ function HomeSection2({ state, actions, libraries }) {
     </Container>
   );
 }
-
-export default connect(HomeSection2);
 
 const Container = styled.section`
   display: flex;

@@ -29,9 +29,6 @@ function HomeSection4({ libraries }) {
     otherTestimonials = postData.filter((f) => f.tags[0] !== 231502154);
   }
 
-  console.log("mainTestimonial", mainTestimonial);
-  console.log("otherTestimonials", otherTestimonials);
-
   return postData !== null && postData !== undefined ? (
     <Container>
       <h3>TESTIMONIALS</h3>

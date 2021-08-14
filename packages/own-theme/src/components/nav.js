@@ -10,7 +10,6 @@ function Nav({ state }) {
 
   function toggleMenu(value) {
     setShowMenu(value);
-    console.log("I was clicked", showMenu);
   }
 
   function displaynavLinks(name, link, visibility) {
