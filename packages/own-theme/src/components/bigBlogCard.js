@@ -101,6 +101,20 @@ const BigCard = styled.div`
       margin-bottom: 0;
     }
 
+    & .card > div.card-0 .text {
+      width: 100%;
+      margin-left: 0px;
+    }
+    & .card > div.card-1 .text {
+      margin-right: 0px;
+      width: 100%;
+      order: 2;
+    }
+
+    & .card > div.card-1 img {
+      order: 1;
+    }
+
     & .card > div > img {
       height: 100%;
       width: 100%;
@@ -121,11 +135,25 @@ const BigCard = styled.div`
   }
 
   @media (max-width: 500px) {
-    & .card > div > .text,
-    & .card > div.inverted > .text {
+    .card > div.card-1 .text {
+      margin: 0px;
       width: 100%;
-      margin: auto;
-      padding: 0;
+      order: 2;
+    }
+
+    .card > div > img {
+      height: 100%;
+      width: 100%;
+      order: 1;
+    }
+
+    .card > div {
+      margin: 0px;
+    }
+
+    .card > div.card-0 .text {
+      margin: 0px;
+      width: 100%;
     }
   }
 `;

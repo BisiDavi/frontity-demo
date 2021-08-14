@@ -1,5 +1,4 @@
 import { styled } from "frontity";
-import Images from "../assets/images";
 
 export default function ContactLensBanner() {
   return (

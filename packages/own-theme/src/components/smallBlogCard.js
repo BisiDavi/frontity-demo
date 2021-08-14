@@ -23,7 +23,7 @@ export default connect(SmallBlogCards);
 const SmallCard = styled.div`
   display: flex;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
 
   & .blog-card {
