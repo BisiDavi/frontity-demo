@@ -22,8 +22,7 @@
     "@frontity/own-theme": "./packages/own-theme",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.5",
-    "frontity": "^1.17.0",
-    "typewriter-effect": "^2.18.0"
+    "frontity": "^1.17.0"
   },
   "devDependencies": {}
 }
